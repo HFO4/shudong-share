@@ -1,0 +1,154 @@
+/*common css*/
+.ystep-container {
+  font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Wenquanyi Micro Hei","Microsoft Yahei",Arial,sans-serif;
+  display: inline-block;
+  position: relative;
+  color: #000;
+}
+.ystep-container ul {
+  list-style: none;
+}
+.ystep-container ul,.ystep-container li,.ystep-container p {
+  margin: 0;
+  padding: 0;
+}
+
+/*size css*/
+.ystep-sm {
+  width: 360px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 1;
+}
+.ystep-lg {
+  width: 700px;
+  height: 60px;
+  font-size: 18px;
+  /*line-height: .3;*/
+}
+
+/*small size css*/
+.ystep-sm .ystep-container-steps {
+  position: absolute;
+  top: 2px;
+  cursor: pointer;
+  z-index: 10;
+}
+.ystep-sm li {
+  float: left;
+  width: 65px;
+  height: 50px;
+}
+.ystep-sm .ystep-step-done {
+  background-position: -119px -76px;
+}
+.ystep-sm .ystep-step-undone {
+  background-position: -60px -76px;
+}
+.ystep-sm .ystep-step-active {
+  background-position: -182px -76px;
+}
+.ystep-sm .ystep-progress {
+  width: 260px;
+  height: 3px;
+  position: absolute;
+  top: 30px;
+  left: 8px;
+  float: left;
+  margin-right: 10px;
+  overflow: hidden;
+}
+.ystep-sm .ystep-progress-bar {
+  width: 260px;
+  height: 6px;
+  background: #e4e4e4;
+  display: inline-block;
+  float: left;
+}
+.ystep-sm .ystep-progress-highlight {
+  height: 6px;
+	display: block;
+}
+
+/*large size css*/
+.ystep-lg .ystep-container-steps {
+  position: absolute;
+  top: 2px;
+  cursor: pointer;
+  z-index: 10;
+}
+.ystep-lg li {
+  float: left;
+  width: 100px;
+  height: 85px;
+}
+.ystep-lg .ystep-step-done {
+  background-position: -278px -132px;
+}
+.ystep-lg .ystep-step-undone {
+  background-position: -137px -131px;
+}
+.ystep-lg .ystep-step-active {
+  background-position: -414px -131px;
+}
+.ystep-lg .ystep-progress {
+  width: 400px;
+  height: 10px;
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  float: left;
+  margin-right: 10px;
+  overflow: hidden;
+}
+.ystep-lg .ystep-progress-bar {
+  width: 400px;
+  height: 20px;
+  background: #e4e4e4;
+  display: inline-block;
+  float: left;
+}
+.ystep-lg .ystep-progress-highlight {
+  height: 20px;
+	display: block;
+}
+
+/*green css*/
+.ystep-green .ystep-step-done {
+  background-image: url("./images/pointes_green.png");
+  background-repeat: no-repeat;
+}
+.ystep-green .ystep-step-undone {
+  background-image: url("./images/pointes_green.png");
+  background-repeat: no-repeat;
+  color: #9c9a9b;
+}
+.ystep-green .ystep-step-active {
+  background-image: url("./images/pointes_green.png");
+  background-repeat: no-repeat;
+  color: #3d8e15;
+}
+.ystep-green .ystep-progress-highlight {
+  background: #89bc65;
+}
+
+/*blue css*/
+.ystep-blue .ystep-step-done {
+  background-image: url("./images/pointes_blue.png");
+  background-repeat: no-repeat;
+}
+.ystep-blue .ystep-step-undone {
+  background-image: url("./images/pointes_blue.png");
+  background-repeat: no-repeat;
+  color: #9c9a9b;
+}
+.ystep-blue .ystep-step-active {
+  background-image: url("./images/pointes_blue.png");
+  background-repeat: no-repeat;
+  color: #3276b1;
+}
+.ystep-blue .ystep-progress-highlight {
+  background: #60baff;
+}
+
+/*popover css*/

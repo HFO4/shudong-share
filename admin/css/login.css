@@ -1,0 +1,31 @@
+body{ 
+background-color: #eeeeee;
+font-family: "微软雅黑";
+}
+.headd{ 
+position: relative;
+top:100px;
+width: 240px;
+}
+.logo{ 
+background-image:url(../images/logo.png);
+width: 85px;
+height: 71px;
+float:left;
+}
+.logo-text{ 
+float:right;
+}
+.text-up{ 
+font-size: 35px;
+color:#616161;
+}
+.text-down{ 
+color:#616161;
+}
+.bd{ 
+width: 285px;
+position: relative;
+top:150px;
+
+}
