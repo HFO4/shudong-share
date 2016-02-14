@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+
+
+  <title>加密分享 - ~$tit~~</title> 
+  <link rel="stylesheet" href="content/themes/default/bootstrap/css/bootstrap.css" /> 
+  <link rel="stylesheet" href="content/themes/default/bootstrap/css/style_v.css" /> 
+    <link rel="stylesheet" href="content/themes/default/bootstrap/css/lock.css" /> 
+      <link rel="stylesheet" href="content/themes/default/bootstrap/css/iosOverlay.css" /> 
+ </head> 
+ <body>
+   ~$head~~ 
+  <script type="text/javascript" src="content/themes/default/bootstrap/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="content/themes/default/js/ZeroClipboard.js"></script> 
+    <script type="text/javascript" src="content/themes/default/js/iosOverlay.js"></script>
+        <script type="text/javascript" src="content/themes/default/js/else.js"></script>
+  <style type="text/css">
+ body {
+	background-image: url(content/themes/default/images/bg.png);
+	background-repeat: repeat-x;
+	background-color: #9cd9f2;
+	margin-top:36px;
+font-family: '微软雅黑';
+}
+.xiaoguo{box-shadow: 0px 0px 30px #888888;}
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, textarea, p, blockquote, th, td { padding: 0; margin: 0; }
+</style> 
+<div>
+~include file="head.html" head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+    <br /> 
+   <br /> 
+   <br /> 
+
+   <br />  <br /> 
+
+   <div style="display:none;">
+    <iframe id="xz" src=""></iframe>
+   </div>
+  <div align="center"> 
+	  <div class='share_content' align="left">
+		<div class="panel panel-default">
+  <div class="panel-heading"><span class="glyphicon glyphicon-lock"></span>请输入分享密码后查看文件：</div>
+  <div class="panel-body">
+
+<div style="height:16px;"></div>
+<input type="text" class="form-control" id="mm" name="mm" placeholder="请输入密码"><br>
+<div align="right">
+
+
+<button class="btn btn-primary" onclick="check();" id="login-button"><span class="glyphicon glyphicon-ok"></span> 确定</button>
+</div>
+  </div>
+</div>
+										
+			
+		  	
+	  </div>
+  </div>
+  <br>  <br>  <br>  <br>  <br>
+  ~include file="footer.html" jscode=$jscode tit=$tit zzurl=$zzurl~~
+  <script language="JavaScript">  
+ $(document).keypress(function(e) {  
+    // 回车键事件  
+       if(e.which == 13) {  
+check();
+       }  
+   }); 
+function check(){ 
+	 	$("#login-button").attr("disabled","true");
+var mmm=$("#mm").val();
+ $.post("includes/share_check.php",
+  {
+    mima:mmm,
+    sskey:"~$sskey~~"
+  },
+  function(data,status){
+	var ge=data.split(".");
+	if(ge[0]=="bad"){
+　　$('#login-button').removeAttr("disabled");
+iosOverlay({
+		text: ge[1],
+		duration: 2e3,
+		icon: "content/themes/default/images/notok.png"
+	});
+	}else if(ge[0]=="ok"){ 
+window.location.href=window.location.href;
+	 	$("#login-button").html("即将跳转，请稍后");
+	}
+  });
+}
+</script>  
+ </body>
+</html>

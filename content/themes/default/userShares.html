@@ -1,0 +1,91 @@
+<title>公开分享 - ~$tit~~</title> 
+   ~include file="userIndexSide.html" head=$head zzurl=$zzurl  isvisitor=$isVisitor userinfo=$userinfo~~
+              <div class="col-md-10">
+                <div class="zhu">
+                  <div class="row">
+                  <div class="col-md-12">
+                    <h1 class="page-header">  公开分享</h1>
+                    </div>
+                  </div>
+                  <div class="row">
+
+                  <div class="col-md-12" style="margin-left: 20px;">
+                  <table class="table table-hover table-bordered "style="width: 96%">
+<thead>
+        <tr>
+        <th> <input type="checkbox" onclick="selectAll(this);"  /></th>
+        <th >分享文件名</th>
+          <th >源件名</th>
+          <th>下载次数</th>
+          <th>分享日期</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+
+         
+          <tbody>
+
+~section loop=$filedata name=two~~  
+ <tr> 
+<td><input type="checkbox"name="file"value="~$filedata[two].sskey~~"  /></th></td>
+<td>~$filedata[two].fname~~.~$filedata[two].ftype~~</td>
+ <td><a target="_blank"href="~$zzurl~~/views/fileJump.php?key=~$filedata[two].filekey~~&ming=~$filedata[two].ming~~">~$filedata[two].ming~~</a></td><td>~$filedata[two].downloadnum~~</td> <td>~$filedata[two].sstime~~</td> 
+ <td><button onclick="delshare('~$filedata[two].sskey~~');"class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> 删除</button> <a href="../f.php?k=~$filedata[two].sskey~~"target="_blank"class="btn btn-info"><i class="glyphicon glyphicon-eye-open"></i> 查看</a></td></td>
+~sectionelse~~ 
+没有记录 
+~/section~~  </tbody></table>
+<button onclick="delall();"id="s"class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> 删除选中分享</button><br><br>
+        </div>
+            </div>
+
+                </div>
+              </div>
+</div>
+              </div><!--con -->
+  <br>  <br>  <br>  <br>  <br>
+  ~include file="footer.html" jscode=$jscode tit=$tit zzurl=$zzurl~~
+  <script language="JavaScript"> 
+  function delall(){
+     var chk_value =[];//定义一个数组    
+            $('input[name="file"]:checked').each(function(){  
+            chk_value.push($(this).val());   
+            });
+            $("#s").attr("disabled","true");
+            for(key1 in chk_value){ 
+                $.post("../includes/userAction.php",{key: chk_value[key1],action: "delshare"},
+  function(data){
+    var pe=data.split(".");
+    if(pe[0]=="ok"){ 
+    }else{ 
+
+
+
+ };
+
+});
+                
+            }
+            $("#ss").removeAttr("disabled");
+            window.location.reload();
+  } 
+ function delshare(key1) {
+   
+$.post("../includes/userAction.php",{key: key1,action: "delshare"},
+  function(data){
+    var pe=data.split(".");
+    if(pe[0]=="ok"){ 
+alert(pe[1]);
+window.location.reload();
+    }else{ 
+alert(pe[1]);
+
+
+ };
+
+});}
+ function selectAll(checkbox) {
+                $('input[type=checkbox]').prop('checked', $(checkbox).prop('checked'));
+            }
+</script>  
+ </body>
+</html>

@@ -1,0 +1,76 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+
+
+  
+  <link rel="stylesheet" href="../content/themes/default/bootstrap/css/bootstrap.css" /> 
+  <link rel="stylesheet" href="../content/themes/default/bootstrap/css/style_u.css" /> 
+    <link rel="stylesheet" href="../content/themes/default/bootstrap/css/lock.css" /> 
+      <link rel="stylesheet" href="../content/themes/default/bootstrap/css/iosOverlay.css" /> 
+ </head> 
+ <body>
+   ~$head~~ 
+  <script type="text/javascript" src="../content/themes/default/bootstrap/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="../content/themes/default/js/ZeroClipboard.js"></script> 
+    <script type="text/javascript" src="../content/themes/default/js/iosOverlay.js"></script>
+        <script type="text/javascript" src="../content/themes/default/js/else.js"></script>
+  <style type="text/css">
+ body {
+  background-image: url(../content/themes/default/images/bg.png);
+  background-repeat: repeat-x;
+  background-color: #9cd9f2;
+  margin-top:36px;
+font-family: '微软雅黑';
+
+}
+a{
+  color: #444444  ;
+}
+.xiaoguo{box-shadow: 0px 0px 30px #888888;}
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, textarea, p, blockquote, th, td { padding: 0; margin: 0; }
+</style> 
+<div>
+~include file="head.html" head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+    <br /> 
+   <br /> 
+   <br /> 
+
+   <br />  <br /> 
+<div class="container">
+<div class="row">
+ <div class="list-group-block col-md-2 zhu">
+                <div class="list-group-panel">
+
+
+<br>
+                  
+                <ul class="list-group">
+                                
+                  <a class="list-group-item " href="userIndex.php"><i class="glyphicon glyphicon-home"></i> 个人主页</a>
+                  
+                  <a class="list-group-item " href="userFiles.php"><i class="glyphicon glyphicon-file"></i> 我的文件</a>
+                  
+                  <a class="list-group-item " href="userShares.php"><i class="glyphicon glyphicon-cloud"></i> 公开分享</a>
+                  <a class="list-group-item " href="userSharesS.php"><i class="glyphicon glyphicon-eye-close"></i> 私密分享</a>
+
+                               
+                  <a class="list-group-item " href="userPassWord.php"><i class="glyphicon glyphicon-lock"></i> 修改密码</a>
+
+                                  <a class="list-group-item " href="../includes/userAction.php?action=logout"><i class="glyphicon glyphicon-circle-arrow-right"></i> 退出登录</a>
+                  
+                </ul>
+              </div>
+
+                    
+
+                     
+
+                
+              </div>
+<script type="text/javascript">
+ var linkname = window.location.pathname.split('/');
+var linknow = linkname[linkname.length-1].split("?");
+ $("a[href='"+linknow+"']").addClass("active");
+</script>

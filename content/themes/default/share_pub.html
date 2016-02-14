@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+   <meta name="keywords" content="~$fname~~,~$kw~~">
+
+  <title> ~$fname~~.~$filetype~~ - ~$tit~~</title> 
+  <link rel="stylesheet" href="content/themes/default/bootstrap/css/bootstrap.css" /> 
+  <link rel="stylesheet" href="content/themes/default/bootstrap/css/style_v.css" /> 
+    <link rel="stylesheet" href="content/themes/default/bootstrap/css/share.css" /> 
+      <link rel="stylesheet" href="content/themes/default/bootstrap/css/iosOverlay.css" /> 
+ </head> 
+ <body>
+   ~$head~~ 
+  <script type="text/javascript" src="content/themes/default/bootstrap/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="content/themes/default/js/ZeroClipboard.js"></script> 
+    <script type="text/javascript" src="content/themes/default/js/iosOverlay.js"></script>
+        <script type="text/javascript" src="content/themes/default/js/else.js"></script>
+  <style type="text/css">
+ body {
+	background-image: url(content/themes/default/images/bg.png);
+	background-repeat: repeat-x;
+	background-color: #9cd9f2;
+	margin-top:36px;
+font-family: '微软雅黑';
+}
+.xiaoguo{box-shadow: 0px 0px 30px #888888;}
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, textarea, p, blockquote, th, td { padding: 0; margin: 0; }
+</style> 
+~include file="head.html" head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+    <br /> 
+   <br /> 
+   <br /> 
+
+
+   <div style="display:none;">
+    <iframe id="xz" src=""></iframe>
+   </div>
+  <div align="center"> 
+	  <div class='share_content' align="left">
+																		
+			<div class="c_left">
+				<div class="c1">
+					<div class="fileheader">
+						<div class="filepic">
+							<img src="includes/filepic.php?t=~$filetype~~" height="80">
+						</div>
+						<div class="file">
+						<br ><div style="height:8px;"></div><h4 style="font-family: '微软雅黑';" >~$fname~~.~$filetype~~</h4>
+						<div id="info"style="color:#A6A6A6;margin-top:4px; ">Loading...</div>
+						</div>
+						<div class="filebutton">
+					<button type="button"onclick="download();" style="width:126px; height:50px;"class="btn btn-success"><h4 style="font-family: '微软雅黑';" ><span class="glyphicon glyphicon-save" aria-hidden="true" ></span> 立即下载</h4></button>
+						</div>
+					</div>
+				</div>
+				<div class="c2">
+<iframe src="includes/prewview.php?ming=~$ming~~&surl=~$fileurl~~" width="700" scrolling="no"frameborder="0"height="395"></iframe>
+				</div>
+			</div>
+			<div class="c_right">
+			<div style="height:5px;"></div>
+				<div class="right_main">
+					<div class="panel panel-default" >
+					  <div class="panel-heading">穿越到手机</div>
+					  <div style="margin-left:0px; " align="center">
+					    <img src="http://qr.liantu.com/api.php?text=~$zzurl~~~$uu~~.php?k=~$sskey~~&w=200">
+					  </div>
+				</div><div class="panel panel-default">
+  <div class="panel-heading">使用须知</div>
+  <div class="panel-body">
+<div class="alert alert-warning" role="alert">您的IP已被记录，严禁下载 存储反动、暴力、色情、违法及侵权内容, 本站有权依法删除并追责。</div>
+  </div>
+</div>
+						</div>
+			</div>
+		  	
+	  </div>
+  </div>
+  <br>  <br>  <br>  <br>
+  ~include file="footer.html" jscode=$jscode tit=$tit zzurl=$zzurl~~
+<script language="JavaScript"> 
+
+$.get("includes/getinfo.php?ming=~$ming~~",function(data,status){
+	var xqq=data.split(".");
+var dx=(xqq[0]/1048576).toFixed(2)+"M";
+var xinxi="大小："+dx+"  &nbsp;&nbsp;分享日期：~$sstime~~  &nbsp;&nbsp;下载次数：~$num~~";
+$("#info").html(xinxi);
+  });
+function download(){ 
+window.open("~$fileurl~~")
+
+$.get("includes/download.php?sskey=~$sskey~~&type=~$stype~~",function(data,status){
+
+  });
+}
+</script>  
+ </body>
+</html>

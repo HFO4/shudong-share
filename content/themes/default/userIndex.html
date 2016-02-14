@@ -1,0 +1,82 @@
+<title>用户中心 - ~$tit~~</title> 
+   ~include file="userIndexSide.html" head=$head zzurl=$zzurl  isvisitor=$isVisitor userinfo=$userinfo~~
+              <div class="col-md-10">
+                <div class="zhu">
+                  <div class="row">
+                  <div class="col-md-12">
+                    <h1 class="page-header">  欢迎您,~$userinfo["username"]~~</h1>
+                    </div>
+                  </div>
+                  <div class="row">
+                <div class="col-lg-3 col-md-6" style="margin-left: 20px;">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" style="height: 114px;">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <div style="font-size: 70px;"><i  class="glyphicon glyphicon-file"></i></div>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">~$filenum~~</div>
+                                    <div>我的文件</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="userFiles.php">
+                            <div class="panel-footer" style="color:#428bca  ">
+                                <span class="pull-left" herf="userFiles.php">查看详情</span>
+                                <span class="pull-right"><i class="glyphicon glyphicon-circle-arrow-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="col-lg-3 col-md-6" >
+                    <div class="panel panel-green">
+                        <div class="panel-heading" style="height: 114px;">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <div style="font-size: 70px;"><i  class="glyphicon glyphicon-cloud"></i></div>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">~$sharenum~~</div>
+                                    <div>我的分享</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="userFiles.php">
+                            <div class="panel-footer" style="color: #5cb85c;">
+                                <span class="pull-left" herf="userShares.php">查看详情</span>
+                                <span class="pull-right"><i class="glyphicon glyphicon-circle-arrow-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+               <div class="col-lg-5 col-md-11" >
+                  <div class="panel panel-default">
+  <div class="panel-body">
+    <div class="info-left"><img src="https://secure.gravatar.com/avatar/~$mailhash~~?s=69&r=g" alt="..." class="img-circle">
+  </div>
+  <div class="info-right">
+    <div ><strong>注册邮箱：</strong>~$userinfo['username']~~<br>
+        <strong>UID：</strong>~$userinfo['uid']~~  <br><strong>注册日期：</strong>~$userinfo['regtime']~~<br><strong>用户组：</strong>~$gname~~<br>
+    </div>
+  </div>
+  </div>
+  <div class="panel-footer" align="right">用户信息</div>
+</div>
+                </div>
+            </div>
+
+                </div>
+              </div>
+</div>
+              </div><!--con -->
+  <br>  <br>  <br>  <br>  <br>
+  ~include file="footer.html" jscode=$jscode tit=$tit zzurl=$zzurl~~
+  <script language="JavaScript">  
+ 
+</script>  
+ </body>
+</html>

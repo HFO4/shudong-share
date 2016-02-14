@@ -1,0 +1,217 @@
+.xiaoguo{box-shadow: 0px 0px 10px #888888;} 
+
+.xuxian{
+	width: 600px;
+	Border: 5px dashed #999999;
+	background-color: #EEEEEE;	
+	}
+.bb{text-align:center;
+border:1px solid #a1a1a1;
+padding:15px 15px; 
+	background-color: #ffffff;
+width:600px;
+border-radius:5px;
+-moz-border-radius:5px; /* 老的 Firefox */}
+
+.ffft{ 
+
+
+
+
+	width: 100%;
+height: 62px;
+padding:5px 10px; 
+color: #999
+
+}
+.con{ 
+
+  position: relative;   /*重要！保证footer是相对于wapper位置绝对*/  
+    height: auto;          /* 保证页面能撑开浏览器高度时显示正常*/  
+  min-height: 100%;
+
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 100px;
+
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+.preview{ 
+padding: 10px;
+}
+.fct{ 
+	background-color: #f2f2f2;
+    padding: 10px;
+		  border-top: 2px solid #eaeaec;
+}
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+	margin-top: 60px;
+
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+img { border: 0; }
+a, input, h2, p, .content { font-family: "微软雅黑"; text-decoration: none;}
+ul li{ display: inline; }
+.header { background: #1b6bb7; height: 65px; border-bottom: #1e64a2 1px solid; }
+.logo { width: 168px; height: 65px;  float: left;}
+.sub_nav { width: 650px; height: 65px; float: right; overflow: hidden; }
+.boxico { width: 40px; }
+.boxico img { padding: 0 5px; float: right; }
+.boxico img:hover { background: #115799; padding: 0 4px; border: #0f4f8c 1px solid; border-width: 0 1px; }
+.main { background: url(../img/bg.png) #95d6f1 repeat-x bottom; border-top: #78acc2 1px solid; height: 520px; }
+.content { color: #78acc2; position: relative; line-height: 35px; height: 35px; font-size: 14px; display: ; }
+.content em { color: #fff; left: 0px; top: -1px; position: absolute; font-style: normal; }
+.wrap { width: 960px; margin: 0 auto; }
+.player { background: #000; height: 520px; border: #78acc2 1px solid; display: ; }
+
+.input_wrap, .upload { width: 960px; height: 40px; margin: 16px auto 0; }
+.upload { margin-top: 18px; }
+.upload a { color: #007cc2; }
+.txt_wrap { float: left; width: 770px; height: 38px; background: url(../img/input_bg.png) repeat-x; position: relative; overflow: hidden; border: #d0d0d0 1px solid; border-radius: 2px; }
+.txt_wrap input { width: 770px; height: 20px; line-height: 20px; padding: 9px 15px; position: absolute; left: 0; top: 0; color: #C3C3C3; font-size: 14px; outline: medium; }
+.txt_wrap input:hover { background: rgba(255, 255, 170, 0.2); }
+.btn_url { float: right; background: #3b8ede; color: #fff; font-size: 18px; padding: 6px 15px 6px 25px; border-radius: 2px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); min-height:26px;}
+.btn_bt { float: right; background: #3b8ede; color: #fff; font-size: 18px; padding: 6px 25px 6px 15px; border-radius: 2px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); min-height:26px;}
+.btn_download { float: right; background: #3b8ede; color: #fff; font-size: 18px; padding: 6px 25px 6px 25px; border-radius: 2px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); min-height:26px;}
+.btn_url:hover { background: #52a4f3; }
+.btn_bt:hover { background: #52a4f3; }
+.btn_download:hover { background: #52a4f3; }
+
+.daysbox { border-top: 1px solid #e0e0e0; background: #f0f0f0; line-height: 24px; width: 100%; height: 90px; color: #999; }
+
+.indexplayer {position:relative; width:960px; height:220px; }
+a.instant:link {color: #52a4f3;	font-size: 12px;	text-decoration: none;}
+a.instant:visited {color: #52a4f3;	font-size: 12px;	text-decoration: none;}
+a.instant:hover {color: #3b8ede;	font-size: 12px;	text-decoration: none;background-color:none;}
+a.instant:active {color: #3b8ede;	font-size: 12px;	text-decoration: none;background-color:none;}
+.instant{color: #535353;	font-size: 12px;	text-decoration: none;}
+
+#message{position:absolute;width:100%;padding:8px 0 8px 0;height:20px;background-color:#fcf8e3;color:#3b8ede;}
+#message-inner{width:960px;margin: 0 auto;}
+#message-close{line-height:20px;float:right;font-size:14px;font-family: "微软雅黑"; }
+#message-body{color:red;float:left;font-size:14px;font-family: "微软雅黑"; }
+.fixed-nav { position: absolute; top: 127px; right: -45px; padding: 0; overflow: hidden; background: ; width: 36px; height: 110px;  z-index: 101}
+
+.days{color:#9f9f9f;font-size:10px;font-family: "微软雅黑"; }
+.errinfo{color:#fff;font-size:14px;font-family: "微软雅黑"; }
+
+#movie {float: left;	width: 960px;	text-align: left;	z-index: 101;	position: relative;}
+.lightSwitcher, .turnedOff {font-size: 14px;	position: absolute;	z-index: 1002;	padding: 0;	outline: none;	text-decoration: none;	zoom: 1;}
+.lightSwitcher:hover {text-decoration: underline;}
+#shadow {background: #000;	position: absolute;	left: 0;	top: 0;	width: 100%;	z-index: 100;	zoom: 1;}
+.turnedOff {color: #ff0;background-position: 0 -50px;}
+.else_c{ 
+background: url(../../images/else_bg.png);
+	background-repeat: no-repeat;
+	height: 428px;
+	width: 528px;
+
+}
+.else_f{ 
+background: url(../../images/file.png);
+	background-repeat: no-repeat;
+	height: 134px;
+	width: 99px;
+position: relative;
+top:80px;
+}
+.f_text{ 
+color: #fff;
+font-size: 22px;
+position: relative;
+top:54px;
+}
+.zhu{ 
+background-color: #fff;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+}
+
+}
+
+
+.list-group-panel .list-group-heading {
+  color: #999;
+  /*border-bottom: 1px solid #ccc;*/
+  padding: 5px 0;
+  /*margin-bottom: 5px;*/
+}
+
+.list-group-panel .list-group {
+
+}
+
+.list-group-panel .list-group-item {
+  border: none;
+  border-radius: 0 0 !important;
+  color: #444;
+  border-left: 3px solid #fff;
+}
+
+.list-group-panel .list-group-item.active,
+.list-group-panel .list-group-item.active:hover {
+  background: #f3f3f3;
+  color: #428bca;
+  font-weight: bold;
+  border-left: 3px solid #428bca;
+
+}
+
+.list-group-panel .list-group-item:hover {
+    border-left: 3px solid #eee;
+
+}
+.page-header {
+
+padding-bottom: 9px;
+margin: 40px 20px 20px;
+border-bottom: 1px solid #eee;
+}
+.huge{
+font-size: 40px;
+}
+.panel-green {
+border-color: #5cb85c;
+}
+.panel-heading{
+  color: #fff;
+  background-color: #5cb85c;
+}
+.info-left{ 
+float: left;
+ }
+ .info-right{ 
+
+margin-left: 85px;
+  }
+  .panel{
+
+    height: 157px;
+  }

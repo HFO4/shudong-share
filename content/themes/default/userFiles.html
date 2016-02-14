@@ -1,0 +1,88 @@
+<title>我的文件 - ~$tit~~</title> 
+   ~include file="userIndexSide.html" head=$head zzurl=$zzurl  isvisitor=$isVisitor userinfo=$userinfo~~
+              <div class="col-md-10">
+                <div class="zhu">
+                  <div class="row">
+                  <div class="col-md-12">
+                    <h1 class="page-header">  我的文件</h1>
+                    </div>
+                  </div>
+                  <div class="row">
+
+                  <div class="col-md-12" style="margin-left: 20px;">
+                  <table class="table table-hover table-bordered "style="width: 96%">
+<thead>
+        <tr>
+        <th> <input type="checkbox" onclick="selectAll(this);"  /></th>
+          <th >文件名</th>
+          <th>上传日期</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+
+         
+          <tbody>
+
+~section loop=$filedata name=two~~  
+ <tr> 
+<td><input type="checkbox"name="file"value="~$filedata[two].key1~~"  /></th></td>
+ <td><a target="_blank"href="~$zzurl~~/views/fileJump.php?key=~$filedata[two].key1~~&ming=~$filedata[two].ming~~">~$filedata[two].ming~~</a></td><td>~$filedata[two].uploadtime~~</td> 
+ <td><button onclick="delfile('~$filedata[two].key1~~');"class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> 删除</button></td></td>
+~sectionelse~~ 
+ nothing  
+~/section~~  </tbody></table>
+<button onclick="delall();"id="s"class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> 删除选中文件</button><br><br>
+        </div>
+            </div>
+
+                </div>
+              </div>
+</div>
+              </div><!--con -->
+  <br>  <br>  <br>  <br>  <br>
+  ~include file="footer.html" jscode=$jscode tit=$tit zzurl=$zzurl~~
+  <script language="JavaScript"> 
+  function delall(){
+     var chk_value =[];//定义一个数组    
+            $('input[name="file"]:checked').each(function(){  
+            chk_value.push($(this).val());   
+            });
+            $("#s").attr("disabled","true");
+            for(key1 in chk_value){ 
+                $.post("../includes/delete_file.php",{key: chk_value[key1]},
+  function(data){
+    var pe=data.split(".");
+    if(pe[0]=="ok"){ 
+    }else{ 
+
+
+
+ };
+
+});
+                
+            }
+            $("#ss").removeAttr("disabled");
+            window.location.reload();
+  } 
+ function delfile(key1) {
+   
+$.post("../includes/delete_file.php",{key: key1},
+  function(data){
+    var pe=data.split(".");
+    if(pe[0]=="ok"){ 
+alert(pe[1]);
+window.location.reload();
+    }else{ 
+alert(pe[1]);
+
+
+ };
+
+});}
+ function selectAll(checkbox) {
+                $('input[type=checkbox]').prop('checked', $(checkbox).prop('checked'));
+            }
+</script>  
+ </body>
+</html>
