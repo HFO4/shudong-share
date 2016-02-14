@@ -1,4 +1,0 @@
-function danru(){
-	$("#logo").fadeIn();
-
-     }
