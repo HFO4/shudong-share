@@ -188,12 +188,17 @@ FileProgress.prototype.setProgress = function(percentage, speed, chunk_size) {
 
 FileProgress.prototype.setComplete = function(up, info) {
     var td = this.fileProgressWrapper.find('td:eq(2) .progress');
-
+$('hide').show();
+                $("#su").fadeIn();
     var res = $.parseJSON(info);
 
+if (policyType == "upyun"){
+    kkey = res.url.replace("/", "");
+}else{
+    kkey = res.key;
+}
 
-
-$.post("includes/save.php",{ming:res.key},function(result){
+$.post("includes/save.php",{ming:kkey},function(result){
 					var ge=result.split(",");
 					var key1 = ge[0];
 					var leixing = ge[1];

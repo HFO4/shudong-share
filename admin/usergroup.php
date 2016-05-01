@@ -370,17 +370,25 @@ alert(pe[1]);
             });
             $("#s").attr("disabled","true");
             for(key1 in chk_value){ 
-                $.post("../includes/adminAction.php",{gid: chk_value[key1],action:"delgroup"},
-  function(data){
+                                           $.ajax({
+             type: "POST",
+             url: "../includes/adminAction.php",
+             data: {gid: chk_value[key1],action: "delgroup"},
+             dataType: "text",
+             async: false,
+             success: function(data){
     var pe=data.split(".");
     if(pe[0]=="ok"){ 
-    }else{ 
 
+    }else{ 
+alert("删除GID:"+key1+"时遇到错误");
 
 
  };
 
-});
+                      }
+         });
+
                 
             }
             $("#ss").removeAttr("disabled");

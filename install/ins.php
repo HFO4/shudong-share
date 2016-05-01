@@ -42,6 +42,8 @@ CREATE TABLE IF NOT EXISTS `sd_policy` (
   `p_url` text COLLATE utf8_bin NOT NULL,
   `p_ak` text COLLATE utf8_bin NOT NULL,
   `p_sk` text COLLATE utf8_bin NOT NULL,
+    `p_op_name` text COLLATE utf8_bin NOT NULL,
+      `p_op_pwd` text COLLATE utf8_bin NOT NULL,
   `p_filetype` text COLLATE utf8_bin NOT NULL,
   `p_mimetype` text COLLATE utf8_bin NOT NULL,
   `p_size` text COLLATE utf8_bin NOT NULL,
@@ -49,8 +51,8 @@ CREATE TABLE IF NOT EXISTS `sd_policy` (
   `p_dir` text COLLATE utf8_bin NOT NULL,
   `p_namerule` text COLLATE utf8_bin NOT NULL
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-INSERT INTO `sd_policy` (`id`, `p_name`, `p_type`, `p_server`, `p_bucketname`, `p_url`, `p_ak`, `p_sk`, `p_filetype`, `p_mimetype`, `p_size`, `p_autoname`, `p_dir`, `p_namerule`) VALUES
-(1, '默认方案-本地', 'local', '-', '-', '".$zzurl."data/', '-', '-', 'jpg,png,rar,dll,mp3,wav,flv', '*', '1048576', 'true', 'data', 'f_{rand8}');
+INSERT INTO `sd_policy` (`id`, `p_name`, `p_type`, `p_server`, `p_bucketname`, `p_url`, `p_ak`, `p_sk`, `p_filetype`, `p_mimetype`, `p_size`, `p_autoname`, `p_dir`, `p_namerule`, `p_op_name`, `p_op_pwd`) VALUES
+(1, '默认方案-本地', 'local', '-', '-', '".$zzurl."data/', '-', '-', 'jpg,png,rar,dll,mp3,wav,flv', '*', '1048576', 'true', 'data', 'f_{rand8}', '-' ,'-');
 CREATE TABLE IF NOT EXISTS `sd_setting` (
   `id` int(1) NOT NULL,
   `main_tit` text COLLATE utf8_bin NOT NULL,
@@ -78,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `sd_setting` (
   `notice` text COLLATE utf8_bin NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 INSERT INTO `sd_setting` (`id`, `main_tit`, `tit_2`, `keyword`, `desword`, `kjming`, `ak`, `sk`, `kjurl`, `zzurl`, `admin_name`, `admin_password`, `theme`, `upload_minetype`, `upload_size`, `upload_fpsize`, `autoname`, `tjcode`, `morelimt`, `leixing`, `daxiao`, `share`, `version`, `notice`) VALUES
-(0, '树洞外链', '免费高速外链平台', '树洞, 树洞外链, 免费外链, 免费图床, QQ空间背景音乐, QQ空间背景音乐外链, 图片外链', '树洞, 树洞外链, 免费外链, 免费图床, QQ空间背景音乐, QQ空间背景音乐外链, 图片外链', '-', '-', '-', '-', '".$zzurl."', 'admin', '-', 'default', '-', '-', '-', '-', '', '-', '-', '-', 'true', '2.2.1|7|7', '');
+(0, '树洞外链', '免费高速外链平台', '树洞, 树洞外链, 免费外链, 免费图床, QQ空间背景音乐, QQ空间背景音乐外链, 图片外链', '树洞, 树洞外链, 免费外链, 免费图床, QQ空间背景音乐, QQ空间背景音乐外链, 图片外链', '-', '-', '-', '-', '".$zzurl."', 'admin', '-', 'default', '-', '-', '-', '-', '', '-', '-', '-', 'true', '2.3 Alpha|9|9', '');
 CREATE TABLE IF NOT EXISTS `sd_ss` (
   `id` int(11) NOT NULL,
   `sskey` text CHARACTER SET utf8 NOT NULL,

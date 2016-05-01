@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>树洞外链2.2安装向导-填写信息</title>
+<title>树洞外链安装向导-填写信息</title>
 </head>
 	<link rel="stylesheet" href="../content/themes/default/bootstrap/css/bootstrap.css">
 <link rel="stylesheet" href="css/ystep.css">
@@ -269,9 +269,16 @@ $.getJSON("http://aoaoao.me/api/register.php?e="+e+"&zzurl="+zzurl+"&callback=?"
 
 
 	
-	}
+	}else{
+      $("#cw").show();
+    $("#pp").removeAttr("disabled");
+    $(".ystep2").setStep(2);
+      $("#pp").html("开始安装");
+$("#cw").html("未知错误"+data);
+  }
    });
-}
+  }
+
 $(".ystep2").loadStep({
   size: "large",
   color: "green",

@@ -12,15 +12,19 @@ $keyp=inject_check($tp);//检查sql注入
 $keyp1=inject_check($sskey);//检查sql注入
 if($keyp=="bad" || $keyp1=="bad"){exit();}
 if($tp=="open"){ 
-	$ku="sd_ss";
+
+$ku="sd_ss";
 }else if($tp=="lock"){ 
-	$ku="sd_sskey";
+$ku="sd_sskey";
 }
 $ju="select * from ".$ku." where sskey = '$sskey'";
 $result = mysqli_query($con,$ju);//获取数据
-while($row = mysqli_fetch_assoc($result)){ 
-	$num= $row['downloadnum']+1;
+while($row = mysqli_fetch_assoc($result))
+  { 
+$num= $row['downloadnum']+1;
+
 }
 $sheng="update ".$ku." set  `downloadnum` = '$num' WHERE sskey = '$sskey'";
 mysqli_query($con,$sheng);
+
 ?>

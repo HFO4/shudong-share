@@ -28,6 +28,7 @@ while($row2 = mysqli_fetch_assoc($results)){
 	$autoName = $row2['p_autoname'];
 	$nameRule = $row2['p_namerule'];
 	$serverUrl = $row2['p_server'];
+	$bucketName = $row2['p_bucketname'];
 }
 if($policyType!="qiniu"){
 	$fileType = 'var min="'.$fileType.'"';
@@ -36,6 +37,10 @@ if($policyType!="qiniu"){
 		$upServer = $zzurl."includes/fileReceive.php";
 	}else if($policyType == "server"){
 		$upServer = $serverUrl;
+	}else if($policyType == "oss"){
+		$upServer = $serverUrl;
+	}else if ($policyType == 'upyun') {
+		$upServer = "http://v0.api.upyun.com/".$bucketName;
 	}
 }else{
 	$fileType = 'var min="'.$fileType.'"';
@@ -46,14 +51,16 @@ $smarty->template_dir = "content/themes/".$theme;
 $head ='<script type="text/javascript" src="includes/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="includes/js/plupload/plupload.full.min.js"></script>
 <script type="text/javascript" src="includes/js/plupload/i18n/zh_CN.js"></script>
-<script type="text/javascript" src="includes/js/ui.js"></script>
-<script type="text/javascript" src="includes/js/main.js"></script>
 <script type="text/javascript" src="includes/js/qiniu.js"></script>
+<script type="text/javascript" src="includes/js/main.js"></script>
+<script type="text/javascript" src="includes/js/ui.js"></script>
 <meta name="description" content="'.$des.'" />
 <meta name="keywords" content="'.$kw.'" />';
+
 $jscode = $tjcode.'
 <script type="text/javascript">
-var autoname='.$autoName.';'.$fileType.'; var max='.$fileSize.'; var fp="'.$filePart.'"; var upserver ="'.$upServer.'"</script>';
+var autoname='.$autoName.';'.$fileType.'; var max='.$fileSize.'; var fp="'.$filePart.'"; var upserver ="'.$upServer.'";var policyType="'.$policyType.'"</script>';
+
 $smarty->assign("isVisitor", $isVisitor); 
 $smarty->assign("userinfo", $userInfo); 
 $smarty->assign("des", $des);

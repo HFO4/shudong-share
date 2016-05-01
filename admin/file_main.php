@@ -348,17 +348,25 @@ function delall(){
             });
             $("#s").attr("disabled","true");
             for(key1 in chk_value){ 
-                $.post("../includes/delete_file.php",{key: chk_value[key1],action:"deluser"},
-  function(data){
+               $.ajax({
+             type: "POST",
+             url: "../includes/delete_file.php",
+             data: {key: chk_value[key1],action: "deluser"},
+             dataType: "text",
+             async: false,
+             success: function(data){
     var pe=data.split(".");
     if(pe[0]=="ok"){ 
-    }else{ 
 
+    }else{ 
+alert("删除key:"+key1+"时遇到错误");
 
 
  };
 
-});
+                      }
+         });
+
                 
             }
             $("#ss").removeAttr("disabled");

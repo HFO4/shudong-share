@@ -11,10 +11,6 @@
   <link rel="stylesheet" href="content/themes/default/bootstrap/css/style.css" />
  </head>
  <body onload="danru();" id="sd_index" class="sdin">
-   ~$head~~ 
-  <script type="text/javascript" src="content/themes/default/bootstrap/js/bootstrap.min.js"></script> 
-  <script type="text/javascript" src="content/themes/default/theme.js"></script> 
-  <script type="text/javascript" src="content/themes/default/js/plax.min.js"></script> 
   <style>
 body {
 
@@ -33,12 +29,12 @@ body {
 </div>~/if~~
 ~if $isVisitor eq "true"~~ 
 <div class="top-button"align="right" >
-      <a  style=""class="btn btn-p-outline" href="views/login.php"><span class="glyphicon glyphicon-user" aria-hidden="true"> 登录/注册</a>
+      <a  style=""class="btn btn-p-outline" href="views/login.php"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 登录/注册</a>
 
 </div>
 ~else~~
 <div class="top-button"align="right" >
-      <a  style=""class="btn btn-p-outline" href="views/userIndex.php"><span class="glyphicon glyphicon-user" aria-hidden="true"> ~$userinfo['username']~~</a>
+      <a  style=""class="btn btn-p-outline" href="views/userIndex.php"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> ~$userinfo['username']~~</a>
 
 </div>
 ~/if~~
@@ -112,5 +108,10 @@ body {
   <span class="scene scene_1"></span> 
   <span class="scene scene_2"></span> 
   <span class="scene scene_3"></span>   ~$jscode~~   
+    ~$head~~ 
+
+  <script type="text/javascript" src="content/themes/default/bootstrap/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="content/themes/default/theme.js"></script> 
+  <script type="text/javascript" src="content/themes/default/js/plax.min.js"></script> 
  </body>
 </html>

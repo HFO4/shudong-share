@@ -216,4 +216,28 @@ function user_shell($uid,$shell,$con){
  $thistime = round($thistime,3); //保留3为小数
 return "ok";
 }
+
+
+//循环目录下的所有文件  
+function delFileUnderDir( $dirName )  {  
+	if ( $handle = opendir( "$dirName" ) ) {  
+	   while ( false !== ( $item = readdir( $handle ) ) ) {  
+		   if ( $item != "." && $item != ".." ) {  
+			   if ( is_dir( "$dirName/$item" ) ) {  
+			        delFileUnderDir( "$dirName/$item" );  
+			   } else {  
+				   if( unlink( "$dirName/$item" ) ){
+				   		return true;
+				   }else{
+				   		return false;
+				   }
+			   }  
+		   }  
+	   }  
+	   closedir( $handle );  
+	}else{
+		return false;
+	}  
+}  
+
 ?>

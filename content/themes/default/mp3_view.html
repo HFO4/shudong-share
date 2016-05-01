@@ -6,14 +6,14 @@
   <link rel="stylesheet" href="./../content/themes/default/bootstrap/css/bootstrap.css" /> 
   <link rel="stylesheet" href="./../content/themes/default/bootstrap/css/style_v.css" /> 
       <link rel="stylesheet" href="./../content/themes/default/bootstrap/css/iosOverlay.css" /> 
-      <link href="../includes/blue.monday/css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="../includes/APlayer/APlayer.min.css">
  </head> 
  <body>
    ~$head~~ 
   <script type="text/javascript" src="./../content/themes/default/bootstrap/js/bootstrap.min.js"></script> 
   <script type="text/javascript" src="./../content/themes/default/js/ZeroClipboard.js"></script> 
     <script type="text/javascript" src="./../content/themes/default/js/iosOverlay.js"></script>
-        <script type="text/javascript" src="../includes/js/jquery.jplayer.min.js"></script>
+        <script src="../includes/APlayer/APlayer.min.js"></script>
   <style type="text/css">
  body {
 	background-image: url(./../content/themes/default/images/bg.png);
@@ -120,43 +120,8 @@ body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, texta
   <div class="preview" align="center">
           <br />
   <div id="m_player">
-  <div id="jquery_jplayer_1" class="jp-jplayer"></div>
-<div id="jp_container_1" style="width:405px;"class="jp-audio" role="application" aria-label="media player">
-	<div class="jp-type-single">
-		<div class="jp-gui jp-interface">
-			<div class="jp-controls">
-				<button class="jp-play" role="button" tabindex="0">play</button>
-				<button class="jp-stop" role="button" tabindex="0">stop</button>
-			</div>
-			<div class="jp-progress">
-				<div class="jp-seek-bar">
-					<div class="jp-play-bar"></div>
-				</div>
-			</div>
-			<div class="jp-volume-controls">
-				<button class="jp-mute" role="button" tabindex="0">mute</button>
-				<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
-				<div class="jp-volume-bar">
-					<div class="jp-volume-bar-value"></div>
-				</div>
-			</div>
-			<div class="jp-time-holder">
-				<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-				<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-				<div class="jp-toggles">
-					<button class="jp-repeat" role="button" tabindex="0">repeat</button>
-				</div>
-			</div>
-		</div>
-		<div class="jp-details">
-			<div class="jp-title" aria-label="title">&nbsp;</div>
-		</div>
-		<div class="jp-no-solution">
-			<span>Update Required</span>
-			To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
-		</div>
-	</div>
-</div></div>
+  <div id="aplayer" class="aplayer"></div>
+</div>
 </div>
 
    <br /> 
@@ -194,7 +159,7 @@ body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, texta
      <tbody > 
       <tr> 
        <td width="114"><label for="shanchu">音乐播放器（HTML）</label></td> 
-       <td width="353"><textarea class="form-control" id="code1" name="code1" rows="3">&lt;iframe src=&quot;~$zzurl~~views/player.php?key=~$key~~&quot; width=&quot;407&quot; scrolling=&quot;no&quot;frameborder=&quot;0&quot;height=&quot;111&quot;&gt;&lt;/iframe&gt;</textarea></td> 
+       <td width="353"><textarea class="form-control" id="code1" name="code1" rows="3">&lt;iframe src=&quot;~$zzurl~~views/player.php?key=~$key~~&quot; width=&quot;407&quot; scrolling=&quot;no&quot;frameborder=&quot;0&quot;height=&quot;70&quot;&gt;&lt;/iframe&gt;</textarea></td> 
        <td width="106"><input type="button" name="daima1" id="daima1" class="btn btn-primary" onclick="fzcg();"data-clipboard-target="code1" value="复制" /></td> 
       </tr> <tr >
       <td><label for="shanchu"><br>音乐播放器<br>（浏览器样式）</label></td>
@@ -262,29 +227,24 @@ mode&quot; value=&quot;transparent&quot; /&gt;</textarea></td>
   ~include file="footer.html" jscode=$jscode tit=$tit zzurl=$zzurl~~
   <script language="JavaScript">  
 
-$(document).ready(function(){
 
-	$("#jquery_jplayer_1").jPlayer({
-		ready: function (event) {
-			$(this).jPlayer("setMedia", {
-				title: "~$filename~~",
-				~$filetype~~: "~$fileurl~~",
-
-			}).jPlayer("play");
-		},
-		swfPath: "../includes/js/jquery.jplayer.swf",
-		supplied: "~$filetype~~",
-		wmode: "window",
-		useStateClassSkin: true,
-		autoBlur: false,
-
-		smoothPlayBar: true,
-		keyEnabled: true,
-		remainingDuration: true,
-		toggleDuration: true
-	});
-
+var ap1 = new APlayer({
+    element: document.getElementById('aplayer'),
+    narrow: false,
+    autoplay: true,
+    showlrc: false,
+    mutex: true,
+    theme: '#b2dae6',
+    music: {
+        title: '~$filename~~',
+        author: '',
+        url: '~$fileurl~~',
+        
+    }
 });
+
+ap1.init();
+
 
 
 

@@ -94,9 +94,13 @@ function delShare($shareKey,$con,$userId){
  			return('bad.无权');
  			exit();
  		}
- 	$deleteAction = "delete from sd_ss where sskey = '$shareKey'";
- 	mysqli_query($con,$deleteAction);
- 	return("ok.删除成功");
+	 	$deleteAction = "delete from sd_ss where sskey = '$shareKey'";
+	 	mysqli_stmt_close($stmt);
+		if (!mysqli_query($con, $deleteAction)) {
+	        printf("bad.删除失败,". mysqli_error($con));
+	    }else{
+	    	echo "ok.删除成功";
+	    }
  	}
 }
 function delShareS($shareKey,$con,$userId){
@@ -105,14 +109,19 @@ function delShareS($shareKey,$con,$userId){
 	mysqli_stmt_bind_param($stmt, "s", $shareKey);
  	mysqli_stmt_execute($stmt);
  	$results = mysqli_stmt_bind_result($stmt,$upuser);
+ 	mysqli_free_result($results);
  	while (mysqli_stmt_fetch($stmt)) {
  		if($userId != $upuser || empty($upuser)){
  			return('bad.无权');
  			exit();
  		}
  	$deleteAction = "delete from sd_sskey where sskey = '$shareKey'";
- 	mysqli_query($con,$deleteAction);
- 	return("ok.删除成功");
+ 	mysqli_stmt_close($stmt);
+		if (!mysqli_query($con, $deleteAction)) {
+	        printf("bad.删除失败,". mysqli_error($con));
+	    }else{
+	    	echo "ok.删除成功";
+	    }
  	}
 }
 function changePwd($pwdNew,$con,$pwdNow,$pwdInput,$userId){

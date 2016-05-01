@@ -407,18 +407,25 @@ alert(pe[1]);
             });
             $("#s").attr("disabled","true");
             for(key1 in chk_value){ 
-                $.post("../includes/adminAction.php",{uid: chk_value[key1],action:"deluser"},
-  function(data){
+                             $.ajax({
+             type: "POST",
+             url: "../includes/adminAction.php",
+             data: {uid: chk_value[key1],action: "deluser"},
+             dataType: "text",
+             async: false,
+             success: function(data){
     var pe=data.split(".");
     if(pe[0]=="ok"){ 
-    }else{ 
 
+    }else{ 
+alert("删除UID:"+key1+"时遇到错误");
 
 
  };
 
-});
-                
+                      }
+         });
+         
             }
             $("#ss").removeAttr("disabled");
           window.location.reload();

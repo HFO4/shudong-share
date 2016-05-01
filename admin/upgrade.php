@@ -37,7 +37,6 @@ $version= explode("|",$row['version']);
   <h1><span class="fa fa-rocket"></span> 欢迎使用在线升级程序</h1>
   <p>通过本程序你可以随时检测新版本并一键升级。您当前的版本为：<?php echo $version['0'] ?></p>
   <p>升级前请注意备份好网站文件及数据库的数据</p>
-    <p>一键升级仅适用于2.X版本间的升级</p>
   <p><a class="btn btn-primary btn-lg"  id="jc"onclick="check();"role="button">立即检查新版本</a></p>
 </div>
 
@@ -49,7 +48,6 @@ $version= explode("|",$row['version']);
   <span id="jianjie">
   <p>通过本程序你可以随时检测新版本并一键升级。您当前的版本为：<?php echo $version['0'] ?></p>
   <p>升级前请注意备份好网站文件及数据库的数据</p>
-    <p>一键升级仅适用于2.X版本间的升级</p>
     </span>
   <p><a class="btn btn-primary btn-lg"  id="gx"role="button"><span class="fa fa-rocket"></span> 一键更新</a></p>
 </div>

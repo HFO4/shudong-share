@@ -36,65 +36,25 @@ $version= explode("|",$row['version']);
             <div id="jian" class="jumbotron">
   <h1><span class="fa fa-cloud"></span> 关于 树洞外链</h1>
   <p>程序版本：<?php echo $version['0'] ?>,&nbsp;&nbsp;版本代号：<?php echo $version[1] ?>;&nbsp;&nbsp;主题支持版本：<?php echo $version[2] ?></p>
-  <p>作者博客：<a href="http://aoaoao.me" target="new">树洞</a></p>
-    <p>E-mail:abslant@126.com     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QQ:912394456</p>
-  <p>技术支持QQ群：64254928</p>
-  <p>感谢轻梦、萌萌哒的布丁协助反馈、调试</p>
+  <p>作者博客：<a href="http://aoaoao.me" target="new">树洞</a>;
+    &nbsp;&nbsp;E-mail:abslant@126.com;   &nbsp;&nbsp;QQ:912394456&nbsp;&nbsp;
+  技术支持QQ群：64254928</p>
+  <p>GitHub项目主页：<a href="https://github.com/HFO4/shudong-share"target="_blank">shudong-share</a> (求个Star_(:зゝ∠)_)</p>
+
   <p>感谢您使用 树洞外链</p>
   <p>P.S.树洞外链的作者是个苦逼高中狗，你可以<a href="http://aoaoao.me/about" target="new">点击这里</a>捐助我以支持树洞外链发展！</p>
+  <p><strong>使用协议：</strong>
+1.你可以在保留版权链接的情况下以非商业目的使用树洞外链；<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.你可以自由修改本程序，但禁止以商业目的出售、专卖原程序、二次修改程序；<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3.对于不遵守以上协议的，树洞外链开发者有权停止对其的服务支持并追究法律责任。
+  </p>
 </div>
 
 
- <div class="container" id="xin" style="display:none;">
-    
- <div class="jumbotron">
-  <h1><span class="fa fa-gift"></span> 检测到新版本：<?php echo $version[0] ?>&nbsp;至&nbsp;<span id="newversion">2.0.1</span></h1>
-  <span id="jianjie">
-  <p>通过本程序你可以随时检测新版本并一键升级。您当前的版本为：<?php echo $version['0'] ?></p>
-  <p>升级前请注意备份好网站文件及数据库的数据</p>
-    <p>一键升级仅适用于2.X版本间的升级</p>
-    </span>
-  <p><a class="btn btn-primary btn-lg"  id="gx"role="button"><span class="fa fa-rocket"></span> 一键更新</a></p>
-</div>
-  </div>
-  
-  
-  
-   <div class="container" id="gxing" style="display:none;">
-    
- <div class="jumbotron">
-  <br>
- <div align="center"> <span class="fa fa-cloud-download fa-5x"></span>
- <h2>正在更新中，请不要关闭本页面</h2>
- </div>
-</div>
-  </div>
-  
-  
-     <div class="container" id="shibai" style="display:none;">
-    
- <div class="jumbotron">
-  <br>
- <div align="center"> <span class="fa fa-frown-o fa-5x"></span>
- <h2 >更新失败，<span id="shibai_text"></span></h2>
- </div>
-</div>
-  </div>
-  
-  
-       <div class="container" id="chenggong" style="display:none;">
-    
- <div class="jumbotron">
-  <br>
- <div align="center"> <span class="fa fa-smile-o fa-5x"></span>
- <h2 >更新成功，尽情享用新版本吧！</h2>
- </div>
-</div>
-  </div>
         </div>
         <!-- /#page-wrapper -->
 
-    </div>
+
     <!-- /#wrapper -->
 
     <!-- jQuery -->

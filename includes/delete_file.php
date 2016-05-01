@@ -5,6 +5,10 @@ require_once("../config.php");//引入配置文件
 require_once('function.php');//引入函数库
 require_once('connect.php');
 require_once("qiniu/rs.php");
+require_once 'oss/autoload.php';
+use OSS\OssClient;
+use OSS\Core\OssException;
+require_once('upyun/upyun.class.php');
 date_default_timezone_set("Asia/Shanghai");//设置时区
 error_reporting(0);//设置错误级别0
 $keyp=inject_check($key1);//检查sql注入
@@ -23,6 +27,8 @@ while(@$row3 = mysqli_fetch_assoc($results)){
 	$bucketName = $row3['p_bucketname'];
 	$ak = $row3['p_ak'];
 	$sk = $row3['p_sk'];
+	$operator_name = $row3['p_op_name'];
+	$operator_pwd = $row3['p_op_pwd'];
 }
 function deleteShare($key1,$con){
 	$shengji="update sd_file set cishuo = '1' where key1 = '$key1'";
@@ -38,8 +44,8 @@ switch ($policyType) {
 		$client = new Qiniu_MacHttpClient(null);
 		$err = Qiniu_RS_Delete($client, $bucketName, $ming);
 		if ($err !== null) {
-		   echo "bad.删除失败";
-
+		   echo "bad.删除失败，但上传记录将被删除";
+		   deleteShare($key1,$con);
 		} else {
 		    echo "ok.删除成功"; 
 			deleteShare($key1,$con);
@@ -51,7 +57,8 @@ switch ($policyType) {
 		    echo "ok.删除成功"; 
 			deleteShare($key1,$con);
 		} else {
-			echo "bad.删除失败";	
+			echo "bad.删除失败，但上传记录将被删除";
+			deleteShare($key1,$con);	
 		}
 		break;
 	case 'server':
@@ -61,8 +68,46 @@ switch ($policyType) {
 		    echo "ok.删除成功"; 
 			deleteShare($key1,$con);
 		} else {
-			echo "bad.删除失败";
+			echo "bad.删除失败，但上传记录将被删除";
+			deleteShare($key1,$con);
 		}
+		break;
+	case oss:
+
+		$accessKeyId = $ak; ;
+		$accessKeySecret = $sk;
+		$endExplode = explode(".",$serverUrl);
+		$endpoint = "http://".$endExplode[1].".".$endExplode[2].".".$endExplode[3];
+
+		try {
+		    $ossClient = new OssClient($accessKeyId, $accessKeySecret, $endpoint, false);
+		} catch (OssException $e) {
+		    print "bad.无法连接至存储服务器";
+		}
+		    $object = $ming;
+		    try{
+		        $ossClient->deleteObject($bucketName, $object);
+		    } catch(OssException $e) {
+		        echo "bad.删除失败，但上传记录将被删除";
+		        deleteShare($key1,$con);
+		        return;
+		    }
+		    echo "ok.删除成功"; 
+		    deleteShare($key1,$con);
+
+		break;
+	case 'upyun':
+		$upyun = new UpYun($bucketName, $operator_name, $operator_pwd);
+		try{
+			$upyun->delete('/'.$ming);
+		}catch(Exception $e) {
+			echo "bad.删除失败,但上传记录将被删除"; 
+			deleteShare($key1,$con);
+		}
+		echo "ok.删除成功";
+		deleteShare($key1,$con);
+		break;
+
 }
 
 ?>

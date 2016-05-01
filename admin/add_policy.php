@@ -30,13 +30,18 @@ $zzurl= $row['zzurl'];
                 <div class="col-lg-12">
                     <h1 class="page-header">添加上传方案</h1>
                     <div id="gg"></div>
-                    <div class="alert alert-success" role="alert">树洞外链提供了三种储存途径。<br><strong>七牛:</strong>
+                    <div class="alert alert-success" role="alert">树洞外链提供了四种储存途径。<br><strong>七牛:</strong>
                     使用七牛云存储(<a href="http://www.qiniu.com/"target="__blank">http://www.qiniu.com/</a>)提供的服务，将文件存储在云端，速度较快，推荐使用这种方式。
                     <br><strong>本地:</strong>
                     将文件储存在本地服务器上，我们不推荐使用这种方式。
                     <br><strong>远程:</strong>
                     如果你有其他空闲服务器，你可以在其上面搭建树洞外链文件存储服务，将文件存储在远程服务器，不消耗本地服务器流量、存储空间。
                     远程服务器搭建教程请<a href="http://aoaoao.me/839.html">点击这里</a>
+                    <br><strong>阿里云OSS:</strong>
+                    对象存储（Object Storage Service，简称OSS），是阿里云对外提供的海量、安全和高可靠的云存储服务。RESTFul API的平台无关性，容量和处理能力的弹性扩展，按实际容量付费真正使您专注于核心业务。
+                    购买服务请<a href="https://www.aliyun.com/product/oss/?spm=5176.7960203.223925.21.3G235O">点击这里</a>推荐配合<a href="https://www.aliyun.com/product/oss/?spm=5176.7960203.223925.21.3G235O">阿里云CDN</a>一起使用以节省费用。
+                    <br><strong>又拍云:</strong>
+                    流量用多少，存储免多少。又拍云实现存储减免优惠，以 CDN 流量使用量 1:1 的减免存储空间使用费用。助力用户大幅节省存储成本，让创业更高效。注册账户请<a href="https://www.upyun.com/">点击这里</a>
                     </div>
                 </div>
                 <!-- /.col-lg-12 -->
@@ -51,6 +56,26 @@ $zzurl= $row['zzurl'];
         <h3 align="center">七牛云存储</h3>
         <p>七牛云存储有新用户免费10G存储空间，全网CDN加速，按需付费<br><br></p>
         <p><a id="qiniu" class="btn btn-primary btn-block" role="button">使用这种方式</a></p>
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="images/oss.png"  class="img-responsive">
+      <div class="caption">
+        <h3 align="center">阿里云OSS</h3>
+        <p>阿里云对外提供的海量、安全和高可靠的云存储服务。<br><br></p>
+        <p><a id="oss" class="btn btn-primary btn-block" role="button">使用这种方式</a></p>
+      </div>
+    </div>
+  </div>
+      <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="images/upyun.png"  class="img-responsive">
+      <div class="caption">
+        <h3 align="center">又拍云存储</h3>
+        <p>又拍云存储在一定条件下是免费的。<br><br><br></p>
+        <p><a id="upyun" class="btn btn-primary btn-block" role="button">使用这种方式</a></p>
       </div>
     </div>
   </div>
@@ -75,9 +100,341 @@ $zzurl= $row['zzurl'];
     </div>
   </div>
 </div>
+<!--upyun-->
+<div class="row">
+     <form id="upyun-f" style="display:none;">
+                 <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">上传方案名:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+                 <input type="text" name="policyname" class="form-control">
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">给上传方案起个名字方便辨认</div>
+                    </div>
+              
+            </div>
+              <div style="height:10px;"></div>
+            <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">服务名称:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+                 <input type="text" name="kjm" class="form-control">
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">创建服务时填写的服务名，一般为英文字符，列如“sdcc”</div>
+                    </div>
+              
+            </div>
+   <div style="height:10px;"></div>
+            <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">空间地址:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+                 <div class="input-group">
+                  <div class="input-group-addon">http://</div>
+                 <input type="text" name="kjurl" class="form-control">
+                                   <div class="input-group-addon">/</div>
+                    </div>
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">空间的URL，一般格式为“XXX.xxx.upaiyun.com.com”，您也可使用自己的域名，但要先到又拍云后台绑定。<strong>只需填写主体部分，开头无需加“http://”，结尾无需加“/”</strong>，例如shudongwl.b0.upaiyun.com</div>
+                    </div>
+              
+            </div>
+   <div style="height:10px;"></div>
+            <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">操作员用户名:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+                 <input type="text" name="op_name" class="form-control">
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">操作员的用户名,可以到又拍云服务管理面板-基础配置-操作员授权中添加</div>
+                    </div>
+              
+            </div>
+            <!-- /.row -->
+               <div style="height:10px;"></div>
+            <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">操作员密码:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+                 <input type="text"  name="op_pwd"class="form-control">
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">创建操作员时填写的密码</div>
+                    </div>
+                <div style="height:10px;"></div>             
+            </div>
+                          <div style="height:10px;"></div>
+            <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">表单API密钥:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+                 <input type="text"  name="ak"class="form-control">
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">请到服务管理面板-高级功能中开启表单API并获取密钥</div>
+                    </div>
+                <div style="height:10px;"></div>             
+            </div>
+              <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">允许的文件扩展名:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+                 <input type="text" value="jpg,png,gif,mp3,flv,rar,zip,flv"name="hz" class="form-control">
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">允许上传的文件的扩展名，多个请用英文逗号“,”隔开</div>
+                    </div>
+              
+            </div>
+   <div style="height:10px;"></div>
+            <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">最大文件尺寸:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+            <div class="input-group">
+
+                 <input type="text" name="dx" class="form-control">
+     
+                <div class="input-group-addon">M</div>
+                    </div>
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">允许上传的文件最大大小，单位为mb，只需输入数字即可</div>
+                    </div>
+              
+            </div>
+
+            <!-- /.row -->
+ <div style="height:10px;"></div>
+<div class="row">
+    <div class="col-lg-2" align="right">
+        <label class="lab">是否自动重命名</label>
+    </div>
+    <div class="col-lg-5" align="left">
+        <input type="radio" name="mm" id="mm" onclick="
+  $('#mmgz').show();"value="true" checked/>
+        <label for="mm" />开启</label>&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="mm" onclick="
+  $('#mmgz').hide();"value="false" id="mq" />
+        <label for="mq">关闭</label>
+    </div>
+    <div class="col-lg-3" align="right">
+        <div class="sm" align="left">推荐开启，开启后系统会自动重命名文件。关闭也可，但重名文件无法上传</div>
+    </div>
+
+</div>
+<div id="mmgz">
+ <div style="height:10px;"></div>
+            <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">自动命名规则:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+                 <input type="text"  value="{date}{rand8}"name="namerule" class="form-control">
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">自动命名规则，一般保持默认即可.你可以使用下面的变量：{date}=>当前日期，{rand4}=>4位随机数，{rand8}=>8位随机数,{time}=>时间戳，系统会自动替换变量为文件命名</div>
+                    </div>
+</div></div>
+            <!-- /.row -->
+
+            <!-- /.row -->        
+                           <div style="height:20px;"></div>
+            <div class="row">
+                <div class="col-lg-2" align="right">
+   
+                    </div>
+                 <div class="col-lg-5" align="left">
+           <a class="btn btn-lg btn-primary" onClick="save('upyun');">保存更改</a>
+                    </div>
+                    <div class="col-lg-3" align="right">
+        
+                    </div>
+              
+            </div></form>
+
+
+
 
             
             <!-- /.row -->
+<!--oss-->
+<div class="row">
+     <form id="oss-f" style="display:none;">
+     <div class="col-lg-12">
+       <div class="alert alert-warning" role="alert"><strong>注意：由于阿里云安全限制，创建空间请注意执行以下步骤，否则无法上传！</strong><br>
+       1.阿里云管理面板-对象存储OSS-选择你的空间-Bucket属性-读写权限设为“公共读”；
+       <br>
+       2.Bucket属性-Cors设置-添加规则-来源和Allowed Header都填“*”，Method 勾选“POST”，缓存时间600秒。
+                    </div>
+                    </div>
+                 <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">上传方案名:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+                 <input type="text" name="policyname" class="form-control">
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">给上传方案起个名字方便辨认</div>
+                    </div>
+              
+            </div>
+              <div style="height:10px;"></div>
+            <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">空间名:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+                 <input type="text" name="kjm" class="form-control">
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">创建空间时填写的空间名，一般为英文字符，列如“sdcc”</div>
+                    </div>
+              
+            </div>
+   <div style="height:10px;"></div>
+            <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">OSS外网域名:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+                 <div class="input-group">
+                  <div class="input-group-addon">http://</div>
+                 <input type="text" name="p_server" class="form-control">
+                                   <div class="input-group-addon">/</div>
+                    </div>
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">空间的URL，一般格式为“空间名.xxx.aliyuncs.com”，<strong>只需填写主体部分，开头无需加“http://”，结尾无需加“/” 请填写阿里云默认赠送的三级域名，否则无法上传！</strong>，例如sdcc.oss-cn-shanghai.aliyuncs.com</div>
+                    </div>
+              
+            </div>
+               <div style="height:10px;"></div>
+            <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">CDN加速域名:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+                 <div class="input-group">
+                  <div class="input-group-addon">http://</div>
+                 <input type="text" name="kjurl" class="form-control">
+                                   <div class="input-group-addon">/</div>
+                    </div>
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">空间外链的URL，一般为阿里云CDN绑定的域名。请在开通阿里云CDN服务后到CDN控制台-CDN域名列表-添加域名添加你自己的域名，业务类型为图片小文件加速，源站类型为OSS域名，然后填写你的OSS外网域名，点下一步添加即可。此处应填写添加域名时所填的你自己的域名。当然也可以与OSS外网域名保持一致，但这样会产生较高的流量费用</div>
+                    </div>
+              
+            </div>
+   <div style="height:10px;"></div>
+            <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">AccessKeyID:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+                 <input type="text" name="ak" class="form-control">
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">空间的AKid,可以到阿里云控制面板右上角“AccessKey”中创建</div>
+                    </div>
+              
+            </div>
+            <!-- /.row -->
+               <div style="height:10px;"></div>
+            <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">AccessKeySecret:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+                 <input type="text"  name="sk"class="form-control">
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">空间的SK,同上一项创建时一同获取</div>
+                    </div>
+                    
+            </div> 
+               <div style="height:10px;"></div>     
+              <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">允许的文件扩展名:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+                 <input type="text" value="jpg,png,gif,mp3,flv,rar,zip,flv"name="hz" class="form-control">
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">允许上传的文件的扩展名，多个请用英文逗号“,”隔开</div>
+                    </div>
+              
+            </div>
+   <div style="height:10px;"></div>
+            <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">最大文件尺寸:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+            <div class="input-group">
+
+                 <input type="text" name="dx" class="form-control">
+     
+                <div class="input-group-addon">M</div>
+                    </div>
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">允许上传的文件最大大小，单位为mb，只需输入数字即可</div>
+                    </div>
+              
+            </div>
+
+            <!-- /.row -->
+               <div style="height:10px;"></div>
+<div class="row">
+    <div class="col-lg-2" align="right">
+        <label class="lab">是否自动重命名</label>
+    </div>
+    <div class="col-lg-5" align="left">
+        <input type="radio" name="mm" id="mm" value="true" checked/>
+        <label for="mm" />开启</label>&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="mm" value="false" id="mq" />
+        <label for="mq">关闭</label>
+    </div>
+    <div class="col-lg-3" align="right">
+        <div class="sm" align="left">推荐开启，开启后系统会自动重命名文件。关闭也可，但重名文件无法上传</div>
+    </div>
+
+</div>
+    
+            <!-- /.row -->
+
+            <!-- /.row -->        
+                           <div style="height:20px;"></div>
+            <div class="row">
+                <div class="col-lg-2" align="right">
+   
+                    </div>
+                 <div class="col-lg-5" align="left">
+           <a class="btn btn-lg btn-primary" onClick="save('oss');">保存更改</a>
+                    </div>
+                    <div class="col-lg-3" align="right">
+        
+                    </div>
+              
+            </div></form>
+
+
+
 
 <!--row2-->
 <div class="row">
@@ -609,6 +966,11 @@ $("#qiniu").click(function(){
   $("#qiniu-f").show();
   $("#choose").hide();
 });
+$("#upyun").click(function(){
+
+  $("#upyun-f").show();
+  $("#choose").hide();
+});
 $("#server").click(function(){
 
   $("#server-f").show();
@@ -618,6 +980,13 @@ $("#local").click(function(){
 
   $("#local-f").show();
   $("#choose").hide();
+});
+$("#oss").click(function(){
+
+
+  $("#choose").hide();
+
+    $("#oss-f").show();
 });
 function save(t){
 

@@ -7,6 +7,10 @@ require_once('function.php');//引入函数库
 require_once('connect.php');
 require_once("qiniu/rs.php");
 require_once('userShell.php');
+require_once('upyun/upyun.class.php');
+//require_once 'oss/autoload.php';
+//use OSS\OssClient;
+//use OSS\Core\OssException;
 date_default_timezone_set("Asia/Shanghai");//设置时区
 error_reporting(0);//设置错误级别0
 $keyp=inject_check($key1);//检查sql注入
@@ -39,10 +43,13 @@ while(@$row3 = mysqli_fetch_assoc($results)){
 	$bucketName = $row3['p_bucketname'];
 	$ak = $row3['p_ak'];
 	$sk = $row3['p_sk'];
+	$operator_name = $row3['p_op_name'];
+	$operator_pwd = $row3['p_op_pwd'];
 }
 if(empty($uploadUser)){
 	$uploadUser = "游客";
 }
+
 switch ($policyType) {
 	case 'qiniu':
 		Qiniu_SetKeys($ak, $sk);
@@ -66,6 +73,13 @@ switch ($policyType) {
 		$fileInfoArr = explode('.', $postResult);
 		echo $fileInfoArr['0'].".".$uploadUser."（UID）".".".$fileInfoArr['1'].".".$uploadTime;
 		break;
+	case 'oss':
+		echo "暂不提供.".$uploadUser."（UID）"."."."暂不提供".".".$uploadTime;
+	case 'upyun':
+		$upyun = new UpYun($bucketName, $operator_name, $operator_pwd);
+		$result = $upyun->getFileInfo('/'.$ming);
+		echo $result['x-upyun-file-size'].".".$uploadUser."（UID）".".暂不提供.".date("Y-m-d H:i:s",$result['x-upyun-file-date']);
+	break;
 }
 
 ?>
