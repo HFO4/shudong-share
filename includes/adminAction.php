@@ -45,7 +45,7 @@ switch ($action) {
 		$policyname=$_POST['policyname'];
 		$policytype=$_POST['policytype'];
 		$kjm=$_POST['kjm'];
-		$p_server=$_POST['p_server'];
+		$p_server="http://".$_POST['p_server']."/";
 		$p_dir=$_POST['p_dir'];
 		$namerule=$_POST['namerule'];
 		$zzurl=$_POST['zzurl'];
