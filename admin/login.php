@@ -5,6 +5,7 @@
   <meta charset="UTF-8" /> 
   <title>登陆管理中心 - 树洞外链</title> 
   <meta name="renderer" content="webkit" /> 
+      <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="favicon.ico" rel="shortcut icon" /> 
   <link rel="stylesheet" href="../content/themes/default/bootstrap/css/bootstrap.css" /> 
   <link rel="stylesheet" href="css/login.css" />
