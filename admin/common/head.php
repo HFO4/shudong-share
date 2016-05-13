@@ -146,7 +146,10 @@
                                     <a href="upgrade.php">在线升级</a>
                                 </li>
                                 <li>
-                                    <a href="http://aoaoao.me/" target="new">使用帮助</a>
+                                    <a href="http://yun.aoaoao.me/" target="new">官方网站</a>
+                                </li>
+                                <li>
+                                    <a href="http://yun.aoaoao.me/buy.php" target="new">获取商业授权</a>
                                 </li>
                                     <li>
                                     <a href="about.php">关于</a>

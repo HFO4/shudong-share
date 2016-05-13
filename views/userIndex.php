@@ -42,6 +42,6 @@ $smarty->assign("isVisitor", $isVisitor);
 $smarty->assign("userinfo", $userInfo); 
 $smarty->assign("head", $head); 
 $smarty->assign("mailhash", md5($userInfo['username'])); 
-$smarty->assign("jscode", 'Powerd by <a target="_blank" href="http://aoaoao.me">树洞外链</a> '.$jscode); 
+$smarty->assign("jscode", 'Powerd by <a target="_blank" href="http://yun.aoaoao.me">树洞外链</a> '.$jscode); 
 $smarty->display("userIndex.html");  
 ?>

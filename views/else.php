@@ -60,7 +60,7 @@ if($ming=="" || $zhuangtai=="1" || $autoName == ""){
 	$smarty->assign("fileurl", $serverUrl.$ming); //外链URL
 	$smarty->assign("head", $head); 
 	$smarty->assign("filetype", $filetype); //文件扩展名
-	$smarty->assign("jscode", 'Powerd by <a target="_blank" href="http://aoaoao.me">树洞外链</a> '.$jscode); 
+	$smarty->assign("jscode", 'Powerd by <a target="_blank" href="http://yun.aoaoao.me">树洞外链</a> '.$jscode); 
 	$smarty->assign("key", $key);
 	$smarty->display("else_view.html");  
 	
