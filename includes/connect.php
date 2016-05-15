@@ -1,5 +1,5 @@
 <?php
- //error_reporting(0);
+ error_reporting(0);
 @$con = new mysqli($sqlip,$sqlid,$sqlpass,$sqlname,$sqlport);
 
 if(mysqli_connect_errno())
