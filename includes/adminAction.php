@@ -45,13 +45,13 @@ switch ($action) {
 		$policyname=$_POST['policyname'];
 		$policytype=$_POST['policytype'];
 		$kjm=$_POST['kjm'];
-		$p_server="http://".$_POST['p_server']."/";
+		$p_server = $_POST['p_server_method'] == "http://" ? "http://".$_POST['p_server']."/" : "https://".$_POST['p_server']."/";
 		$p_dir=$_POST['p_dir'];
 		$namerule=$_POST['namerule'];
 		$zzurl=$_POST['zzurl'];
 		$ak=$_POST['ak'];
 		$sk=$_POST['sk'];
-		$kjurl="http://".$_POST['kjurl']."/";
+		$kjurl = $_POST['kjurl_method'] == "http://" ? "http://".$_POST['kjurl']."/" : "https://".$_POST['kjurl']."/";
 		$hz= $_POST['hz'];
 		$dx= $_POST['dx']*1048576;
 		$fp= $_POST['fp'];

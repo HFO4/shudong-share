@@ -135,7 +135,12 @@ $zzurl= $row['zzurl'];
                     </div>
                  <div class="col-lg-5" align="right">
                  <div class="input-group">
-                  <div class="input-group-addon">http://</div>
+                  <div class="input-group-addon">
+                    <select name="kjurl_method" onchange="">
+                        <option value="http://">http://</option>
+                        <option value="https://">https://</option>
+                    </select>
+                    </div>
                  <input type="text" name="kjurl" class="form-control">
                                    <div class="input-group-addon">/</div>
                     </div>
@@ -312,7 +317,12 @@ $zzurl= $row['zzurl'];
                     </div>
                  <div class="col-lg-5" align="right">
                  <div class="input-group">
-                  <div class="input-group-addon">http://</div>
+                  <div class="input-group-addon">
+                    <select name="p_server_method" onchange="">
+                        <option value="http://">http://</option>
+                        <option value="https://">https://</option>
+                    </select>
+                  </div>
                  <input type="text" name="p_server" class="form-control">
                                    <div class="input-group-addon">/</div>
                     </div>
@@ -329,7 +339,12 @@ $zzurl= $row['zzurl'];
                     </div>
                  <div class="col-lg-5" align="right">
                  <div class="input-group">
-                  <div class="input-group-addon">http://</div>
+                  <div class="input-group-addon">
+                    <select name="kjurl_method" onchange="">
+                        <option value="http://">http://</option>
+                        <option value="https://">https://</option>
+                    </select>
+                    </div>
                  <input type="text" name="kjurl" class="form-control">
                                    <div class="input-group-addon">/</div>
                     </div>
@@ -471,7 +486,12 @@ $zzurl= $row['zzurl'];
                     </div>
                  <div class="col-lg-5" align="right">
                  <div class="input-group">
-                  <div class="input-group-addon">http://</div>
+                  <div class="input-group-addon">
+                    <select name="kjurl_method" onchange="">
+                        <option value="http://">http://</option>
+                        <option value="https://">https://</option>
+                    </select>
+                    </div>
                  <input type="text" name="kjurl" class="form-control">
                                    <div class="input-group-addon">/</div>
                     </div>
@@ -644,7 +664,12 @@ $zzurl= $row['zzurl'];
                     </div>
                  <div class="col-lg-5" align="right">
                  <div class="input-group">
-                  <div class="input-group-addon">http://</div>
+                  <div class="input-group-addon">
+                    <select name="p_server_method" onchange="">
+                        <option value="http://">http://</option>
+                        <option value="https://">https://</option>
+                    </select>
+                  </div>
                  <input type="text" name="kjurl" class="form-control">
                                    <div class="input-group-addon">/</div>
                     </div>
@@ -814,7 +839,12 @@ $zzurl= $row['zzurl'];
                     </div>
                  <div class="col-lg-5" align="right">
                  <div class="input-group">
-                  <div class="input-group-addon">http://</div>
+                  <div class="input-group-addon">
+                    <select name="kjurl_method" onchange="">
+                        <option value="http://">http://</option>
+                        <option value="https://">https://</option>
+                    </select>
+                    </div>
                  <input type="text" name="kjurl" class="form-control">
                                    <div class="input-group-addon">/</div>
                     </div>
