@@ -23,9 +23,7 @@ function FileProgress(file, targetID) {
 
 
         var fileSize = plupload.formatSize(file.size).toUpperCase();
-        var progressSize = $("<td/>");
-        progressSize.addClass("progressFileSize").text();
-
+ 
         var progressBarTd = $("<td/>");
         var progressBarBox = $("<div/>");
         progressBarBox.addClass('success');
@@ -60,8 +58,7 @@ function FileProgress(file, targetID) {
         progressBarTd.append(progressBarBox);
 
 
-        Wrappeer.append(progressText);
-        Wrappeer.append(progressSize);
+
         Wrappeer.append(progressBarTd);
 
         $('#' + targetID).append(Wrappeer);
@@ -83,7 +80,7 @@ FileProgress.prototype.getTimer = function(timer) {
 
 FileProgress.prototype.reset = function() {
     this.fileProgressWrapper.attr('class', "progressContainer");
-    this.fileProgressWrapper.find('td .progress .progress-bar-success').attr('aria-valuenow', 0).width('0%').find('span').text('');
+    this.fileProgressWrapper.find('td .progress .progress-bar').attr('aria-valuenow', 0).width('0%').find('span').text('');
     this.appear();
 };
 
@@ -99,10 +96,10 @@ FileProgress.prototype.setChunkProgess = function(chunk_size) {
     var progressBarChunk = $('<div/>');
     for (var i = 1; i <= chunk_amount; i++) {
         var col = $('<div class="col-md-2"/>');
-        var progressBarWrapper = $('<div class="progress progress-striped"></div');
+        var progressBarWrapper = $('<div class="progress progress-striped active"></div');
 
         var progressBar = $("<div/>");
-        progressBar.addClass("progress-bar progress-bar-success text-left")
+        progressBar.addClass("progress-bar")
             .attr('role', 'progressbar')
             .attr('aria-valuemax', 100)
             .attr('aria-valuenow', 0)
@@ -135,8 +132,9 @@ FileProgress.prototype.setProgress = function(percentage, speed, chunk_size) {
 
     var size = plupload.formatSize(uploaded).toUpperCase();
     var formatSpeed = plupload.formatSize(speed).toUpperCase();
-    var progressbar = this.fileProgressWrapper.find('td .progress').find('.progress-bar-success');
-    $(".ss").text(" 已上传: " + size + " 上传速度： " + formatSpeed + "/s");
+    var progressbar = this.fileProgressWrapper.find('td .progress').find('.progress-bar');
+    $("#t-left").text(formatSpeed + "/s ");
+    $("#t-right").text(percentage);
     percentage = parseInt(percentage, 10);
     if (file.status !== plupload.DONE && percentage === 100) {
         percentage = 99;
@@ -238,11 +236,12 @@ if (leixing == "png" || leixing == "jpg" || leixing == "gif" || leixing == "jpeg
 
 };
 FileProgress.prototype.setError = function() {
-    this.fileProgressWrapper.find('td:eq(2)').attr('class', 'text-warning');
-    this.fileProgressWrapper.find('td:eq(2) .progress').css('width', 0).hide();
+    this.fileProgressWrapper.find('td:eq(0)').attr('class', 'text-warning');
+    this.fileProgressWrapper.find('td:eq(0) .progress').css('width', 0).hide();
     this.fileProgressWrapper.find('button').hide();
     this.fileProgressWrapper.next('.chunk-status-tr').hide();
-
+$("#t-left").text("");
+$("#t-right").text("");
 };
 
 FileProgress.prototype.setCancelled = function(manual) {
@@ -251,7 +250,7 @@ FileProgress.prototype.setCancelled = function(manual) {
         progressContainer += ' red';
     }
     this.fileProgressWrapper.attr('class', progressContainer);
-    this.fileProgressWrapper.find('td .progress .progress-bar-success').css('width', 0);
+    this.fileProgressWrapper.find('td .progress .progress-bar').css('width', 0);
 };
 
 FileProgress.prototype.setStatus = function(status, isUploading) {
