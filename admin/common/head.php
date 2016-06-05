@@ -39,7 +39,7 @@
         <script type="text/javascript" src="../includes/js/jquery-1.9.1.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-          <script type="text/javascript" src="../content/themes/default/bootstrap/js/bootstrap.min.js"></script> 
+          <script type="text/javascript" src="js/bootstrap.min.js"></script> 
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="js/metisMenu.min.js"></script>
@@ -47,8 +47,8 @@
     <!-- Morris Charts JavaScript -->
 
 
-      <link rel="stylesheet" href="../content/themes/default/bootstrap/css/iosOverlay.css" /> 
-    <script type="text/javascript" src="../content/themes/default/js/iosOverlay.js"></script>
+      <link rel="stylesheet" href="css/iosOverlay.css" /> 
+    <script type="text/javascript" src="js/iosOverlay.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/sb-admin-2.js"></script>
 </head>

@@ -33,6 +33,13 @@ while($row2 = mysqli_fetch_assoc($result2)){
 	$fileDataOne = $row2;
 	$fileData[] = $fileDataOne;
 }
+foreach($fileData as $key=>$val) {
+	if (is_array($val)) { 
+		foreach($val as $key1=>$val) {
+			$fileData[$key][$key1] = htmlspecialchars($val,ENT_QUOTES,utf-8);
+		}
+	}
+}
 
 $smarty->template_dir = "./../content/themes/".$theme;
 $head='<script type="text/javascript" src="./../includes/js/jquery-1.9.1.min.js"></script>';

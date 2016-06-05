@@ -1,0 +1,65 @@
+~include file="header.html" tit = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+<title>加密分享 - ~$tit~~</title>~include file="head.html" tit = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+<style type="text/css">
+    .footer{
+            position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+
+    }
+</style>
+<div class="container">
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<br><br><br>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">请输入分享密码：</h3>
+  </div>
+  <div class="panel-body">
+    
+      <input type="text" class="form-control" id="mm"name="mm"placeholder="请输入密码">
+      <div align="right">
+    <button  onclick="check();"id="login-button" class="btn btn-raised btn-primary"><i class="fa fa-check" aria-hidden="true"></i> 确定</button>
+  </div></div>
+</div>
+
+   
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    </div>
+    ~include file="footer.html" titm = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+    <script type="text/javascript" src="~$zzurl~~content/themes/material/js/ZeroClipboard.js"></script>
+    <script type="text/javascript">
+    $(document).keypress(function(e) {  
+    // 回车键事件  
+       if(e.which == 13) {  
+check();
+       }  
+   }); 
+function check(){ 
+    $("#login-button").attr("disabled","true");
+var mmm=$("#mm").val();
+ $.post("includes/share_check.php",
+  {
+    mima:mmm,
+    sskey:"~$sskey~~"
+  },
+  function(data,status){
+  var ge=data.split(".");
+  if(ge[0]=="bad"){
+　　$('#login-button').removeAttr("disabled");
+$.snackbar({
+                            content: ge[1],
+                            timeout: 2000
+                        });
+  }else if(ge[0]=="ok"){ 
+window.location.href=window.location.href;
+    $("#login-button").html("即将跳转，请稍后");
+  }
+  });
+}
+    </script>

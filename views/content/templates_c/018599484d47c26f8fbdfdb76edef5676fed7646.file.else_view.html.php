@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2016-06-05 05:52:58
-         compiled from ".\..\content\themes\material\pic_view.html" */ ?>
-<?php /*%%SmartyHeaderCode:1270357536e727e3480-96320908%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.18, created on 2016-06-05 05:52:09
+         compiled from ".\..\content\themes\material\else_view.html" */ ?>
+<?php /*%%SmartyHeaderCode:281655753b7f0042074-53489440%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '386550dba2488b6b0c8f2d978c28a5573c667562' => 
+    '018599484d47c26f8fbdfdb76edef5676fed7646' => 
     array (
-      0 => '.\\..\\content\\themes\\material\\pic_view.html',
-      1 => 1465105976,
+      0 => '.\\..\\content\\themes\\material\\else_view.html',
+      1 => 1465105923,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1270357536e727e3480-96320908',
+  'nocache_hash' => '281655753b7f0042074-53489440',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_57536e729239d2_92577217',
+  'unifunc' => 'content_5753b7f021ab68_93421527',
   'variables' => 
   array (
     'tit' => 0,
@@ -24,38 +24,61 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'zzurl' => 0,
     'isVisitor' => 0,
     'userinfo' => 0,
-    'fileurl' => 0,
     'filename' => 0,
+    'fileurl' => 0,
     'key' => 0,
     'filetype' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57536e729239d2_92577217')) {function content_57536e729239d2_92577217($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('tit'=>$_smarty_tpl->tpl_vars['tit']->value,'head'=>$_smarty_tpl->tpl_vars['head']->value,'zzurl'=>$_smarty_tpl->tpl_vars['zzurl']->value,'isvisitor'=>$_smarty_tpl->tpl_vars['isVisitor']->value,'userinfo'=>$_smarty_tpl->tpl_vars['userinfo']->value), 0);?>
+<?php if ($_valid && !is_callable('content_5753b7f021ab68_93421527')) {function content_5753b7f021ab68_93421527($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('tit'=>$_smarty_tpl->tpl_vars['tit']->value,'head'=>$_smarty_tpl->tpl_vars['head']->value,'zzurl'=>$_smarty_tpl->tpl_vars['zzurl']->value,'isvisitor'=>$_smarty_tpl->tpl_vars['isVisitor']->value,'userinfo'=>$_smarty_tpl->tpl_vars['userinfo']->value), 0);?>
 
 <title>文件详情 - <?php echo $_smarty_tpl->tpl_vars['tit']->value;?>
 </title><?php echo $_smarty_tpl->getSubTemplate ("head.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('tit'=>$_smarty_tpl->tpl_vars['tit']->value,'head'=>$_smarty_tpl->tpl_vars['head']->value,'zzurl'=>$_smarty_tpl->tpl_vars['zzurl']->value,'isvisitor'=>$_smarty_tpl->tpl_vars['isVisitor']->value,'userinfo'=>$_smarty_tpl->tpl_vars['userinfo']->value), 0);?>
 
+<style type="text/css">
+    .aplayer{
+        width:100%;
+             margin: 0px; 
+             box-shadow: 0 0px 0px 0 rgba(0,0,0,.14);
+    }
+    .aplayer .aplayer-pic{
+        height: 100px;
+    width: 100px;
+    }
+    .aplayer .aplayer-info{
+        margin-left: 100px;
+    }
+    .aplayer .aplayer-info .aplayer-music .aplayer-title {
+    font-size: 25px;
+}
+.aplayer .aplayer-info {
+    margin-left: 100px;
+    padding: 25px 7px 0 10px;
+    height: 66px;
+    box-sizing: border-box;
+}
+</style>
 <div class="container">
     <div class="row">
         <div class="col-md-9">
-            <div class="well bs-component " style="padding: 0px;" align="center">
-                <img src="<?php echo $_smarty_tpl->tpl_vars['fileurl']->value;?>
-" class="preview_pic" alt="<?php echo $_smarty_tpl->tpl_vars['filename']->value;?>
-" />
+            <div class="well bs-component " style="padding-top: 150px;padding-bottom: 150px;" align="center">
+                  <div class="elseview">
+                      <div class="tubiao"><i class="fa fa-file" aria-hidden="true"></i> </div>
+
+                  </div>
+  <div class="elsetext" align="center"><?php echo $_smarty_tpl->tpl_vars['filename']->value;?>
+</div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-body" style="padding: 0px;">
                     <ul class="nav nav-tabs" style="margin-bottom: 15px;">
                         <li class="active"><a href="#wl" data-toggle="tab"><i class="fa fa-link" aria-hidden="true"></i> 文件外链</a>
                         </li>
-                        <li><a href="#dy" data-toggle="tab"><i class="fa fa-code" aria-hidden="true"></i> 调用</a>
-                        </li>
+                      
                         <li><a href="#qrcode" data-toggle="tab"><i class="fa fa-qrcode" aria-hidden="true"></i> 二维码</a>
                         </li>
-                        <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="bootstrap-elements.html" data-target="#"><i class="fa fa-share" aria-hidden="true"></i>
-                创建分享 <span class="caret"></span>
-              </a>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="bootstrap-elements.html" data-target="#"><i class="fa fa-share" aria-hidden="true"></i> 创建分享<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#gkfx" data-toggle="tab"><i class="fa fa-eye" aria-hidden="true"></i> 公开分享</a>
                                 </li>
@@ -109,33 +132,32 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                     <input type="text" class="form-control" id="yuantu" value="<?php echo $_smarty_tpl->tpl_vars['fileurl']->value;?>
 ">
                                 </div>
-                                <div class="col-md-2"> <a id="fuzhi" data-clipboard-target="yuantu" class="btn btn-raised btn-primary" data-content="复制成功" data-toggle="snackbar" data-timeout="2000">复制</a>
+                                <div class="col-md-2"><a id="fuzhi" data-clipboard-target="yuantu" class="btn btn-raised btn-primary" data-content="复制成功" data-toggle="snackbar" data-timeout="2000">复制</a>
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="dy">
                             <div class="row">
                                 <div class="col-md-2">
-                                    <lable>HTML调用：</lable>
+                                    <lable>APlayer：</lable>
                                 </div>
                                 <div class="col-md-8">
-                                    <textarea id="htmldy" rows="3" class="form-control">&lt;img src=&quot;<?php echo $_smarty_tpl->tpl_vars['fileurl']->value;?>
-&quot; alt=&quot;<?php echo $_smarty_tpl->tpl_vars['filename']->value;?>
-&quot; &gt;</textarea>
+                                    <textarea id="htmldy" rows="3" class="form-control">&lt;iframe src=&quot;<?php echo $_smarty_tpl->tpl_vars['zzurl']->value;?>
+views/player.php?key=<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+&quot; width=&quot;407&quot; scrolling=&quot;no&quot;frameborder=&quot;0&quot;height=&quot;70&quot;&gt;&lt;/iframe&gt;</textarea>
                                 </div>
-                                <div class="col-md-2"> <a id="fuzhi1" data-clipboard-target="htmldy" class="btn btn-raised btn-primary" data-content="复制成功" data-toggle="snackbar" data-timeout="2000">复制</a>
+                                <div class="col-md-2"><a id="fuzhi1" data-clipboard-target="htmldy" class="btn btn-raised btn-primary" data-content="复制成功" data-toggle="snackbar" data-timeout="2000">复制</a>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-2">
-                                    <lable>Markdown调用:</lable>
+                                    <lable>HTML5播放器：</lable>
                                 </div>
                                 <div class="col-md-8">
-                                    <textarea id="mddy" rows="3" class="form-control">![<?php echo $_smarty_tpl->tpl_vars['filename']->value;?>
-](<?php echo $_smarty_tpl->tpl_vars['fileurl']->value;?>
-)</textarea>
+                                    <textarea id="mddy" rows="3" class="form-control">&lt;audio src=&quot;<?php echo $_smarty_tpl->tpl_vars['fileurl']->value;?>
+&quot; controls=&quot;controls&quot;&gt;  &lt;/audio&gt;</textarea>
                                 </div>
-                                <div class="col-md-2"> <a id="fuzhi2" data-clipboard-target="mddy" class="btn btn-raised btn-primary" data-content="复制成功" data-toggle="snackbar" data-timeout="2000">复制</a>
+                                <div class="col-md-2"><a id="fuzhi2" data-clipboard-target="mddy" class="btn btn-raised btn-primary" data-content="复制成功" data-toggle="snackbar" data-timeout="2000">复制</a>
                                 </div>
                             </div>
                         </div>
@@ -256,8 +278,9 @@ views/pic.php?key=<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
     <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['zzurl']->value;?>
 content/themes/material/js/ZeroClipboard.js"></script>
     <script type="text/javascript">
-        load = "0";
+   
 
+var load ="0";
         function xiangqing() {
             $("#guanli").hide();
             $("#fileurl").hide();
@@ -322,7 +345,7 @@ content/themes/material/js/ZeroClipboard.js"></script>
                         $('#pwd-lock').val("密码：" + pwd);
                         $("#sm").hide();
                         $("#fuzhi4").attr("data-clipboard-text", "链接：<?php echo $_smarty_tpl->tpl_vars['zzurl']->value;?>
-" + ge[4] + "." + ge[5] + "  密码：" + pwd);
+" + ge[4] + "." + ge[5] + " 密码：" + pwd);
                         $("#result_lock").show();
                         $.snackbar({
                             content: "创建成功",

@@ -1,0 +1,40 @@
+~include file="header.html" tit = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+
+<title>个人详情 - ~$tit~~</title>~include file="head.html" tit = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+<style type="text/css">
+
+</style>
+<div class="container">
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<br><br><br>
+<div class="well bs-component"style="padding: 0px;">
+<div class="uhead" align="center">
+<div class="gravatar">
+  <img src="https://secure.gravatar.com/avatar/~$mailhash~~?s=80&r=g"  class="img-circle"><div class="info">~$userinfo['username']~~</div>
+  </div>
+</div>
+<div class="pcontent">
+<div class="row">
+<br>
+<div class="col-xs-4" align="center"><h1>~$filenum~~</h1><span class="label label-primary">我的文件</span></div>
+<div class="col-xs-4"align="center"><h1>~$sharenum~~</h1><span class="label label-info">我的分享</span></div>
+<div class="col-xs-4"align="center"><h1>~$userinfo['uid']~~</h1><span class="label label-danger">用户序号</span></div>
+</div>
+<br>
+</div>
+<div style="margin-left: 2px;margin-right: 2px;" align="center">
+<a href="~$zzurl~~views/userPassWord.php" class="do btn btn-raised btn-default btn-lg ">修改密码</a>
+<a href="~$zzurl~~includes/userAction.php?action=logout" class="do dow btn-raised btn btn-default btn-lg ">退出登陆</a>
+
+</div>
+
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    </div>
+    <br><br><br>
+    ~include file="footer.html" titm = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+    <script type="text/javascript" src="~$zzurl~~content/themes/material/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="~$zzurl~~content/themes/material/js/login.js"></script> 

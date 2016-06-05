@@ -113,7 +113,7 @@ var ge=data;
 	iosOverlay({
 		text: "未检测到新版本",
 		duration: 2e3,
-		icon: "./../content/themes/default/images/check.png"
+		icon: "images/check.png"
 		
 	});
 		$("#jc").removeAttr("disabled"); 

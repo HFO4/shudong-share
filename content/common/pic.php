@@ -29,6 +29,6 @@ border-radius: 4px;
 transition: all .2s ease-in-out;
 }
 </style> 
-<div style="height:50px;"></div>
+
 <div align="center">
-<img class="img-thumbnail" height="295"src="<?php echo $kjurl; ?>" /></div>
+<img class="img-responsive " src="<?php echo $kjurl; ?>" /></div>

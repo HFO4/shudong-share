@@ -1,48 +1,36 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2016-06-05 05:52:58
-         compiled from ".\..\content\themes\material\pic_view.html" */ ?>
-<?php /*%%SmartyHeaderCode:1270357536e727e3480-96320908%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-$_valid = $_smarty_tpl->decodeProperties(array (
-  'file_dependency' => 
-  array (
-    '386550dba2488b6b0c8f2d978c28a5573c667562' => 
-    array (
-      0 => '.\\..\\content\\themes\\material\\pic_view.html',
-      1 => 1465105976,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '1270357536e727e3480-96320908',
-  'function' => 
-  array (
-  ),
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_57536e729239d2_92577217',
-  'variables' => 
-  array (
-    'tit' => 0,
-    'head' => 0,
-    'zzurl' => 0,
-    'isVisitor' => 0,
-    'userinfo' => 0,
-    'fileurl' => 0,
-    'filename' => 0,
-    'key' => 0,
-    'filetype' => 0,
-  ),
-  'has_nocache_code' => false,
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57536e729239d2_92577217')) {function content_57536e729239d2_92577217($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('tit'=>$_smarty_tpl->tpl_vars['tit']->value,'head'=>$_smarty_tpl->tpl_vars['head']->value,'zzurl'=>$_smarty_tpl->tpl_vars['zzurl']->value,'isvisitor'=>$_smarty_tpl->tpl_vars['isVisitor']->value,'userinfo'=>$_smarty_tpl->tpl_vars['userinfo']->value), 0);?>
-
-<title>文件详情 - <?php echo $_smarty_tpl->tpl_vars['tit']->value;?>
-</title><?php echo $_smarty_tpl->getSubTemplate ("head.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('tit'=>$_smarty_tpl->tpl_vars['tit']->value,'head'=>$_smarty_tpl->tpl_vars['head']->value,'zzurl'=>$_smarty_tpl->tpl_vars['zzurl']->value,'isvisitor'=>$_smarty_tpl->tpl_vars['isVisitor']->value,'userinfo'=>$_smarty_tpl->tpl_vars['userinfo']->value), 0);?>
-
+~include file="header.html" tit = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+<link rel="stylesheet" href="~$zzurl~~includes/APlayer/APlayer.min.css">
+<title>文件详情 - ~$tit~~</title>~include file="head.html" tit = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+<style type="text/css">
+    .aplayer{
+        width:100%;
+             margin: 0px; 
+             box-shadow: 0 0px 0px 0 rgba(0,0,0,.14);
+    }
+    .aplayer .aplayer-pic{
+        height: 100px;
+    width: 100px;
+    }
+    .aplayer .aplayer-info{
+        margin-left: 100px;
+    }
+    .aplayer .aplayer-info .aplayer-music .aplayer-title {
+    font-size: 25px;
+}
+.aplayer .aplayer-info {
+    margin-left: 100px;
+    padding: 25px 7px 0 10px;
+    height: 66px;
+    box-sizing: border-box;
+}
+</style>
 <div class="container">
     <div class="row">
         <div class="col-md-9">
             <div class="well bs-component " style="padding: 0px;" align="center">
-                <img src="<?php echo $_smarty_tpl->tpl_vars['fileurl']->value;?>
-" class="preview_pic" alt="<?php echo $_smarty_tpl->tpl_vars['filename']->value;?>
-" />
+                  <div id="m_player">
+  <div id="aplayer" class="aplayer"></div>
+</div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-body" style="padding: 0px;">
@@ -53,9 +41,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         </li>
                         <li><a href="#qrcode" data-toggle="tab"><i class="fa fa-qrcode" aria-hidden="true"></i> 二维码</a>
                         </li>
-                        <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="bootstrap-elements.html" data-target="#"><i class="fa fa-share" aria-hidden="true"></i>
-                创建分享 <span class="caret"></span>
-              </a>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="bootstrap-elements.html" data-target="#"><i class="fa fa-share" aria-hidden="true"></i> 创建分享<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#gkfx" data-toggle="tab"><i class="fa fa-eye" aria-hidden="true"></i> 公开分享</a>
                                 </li>
@@ -106,50 +92,42 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                     <lable>外链地址：</lable>
                                 </div>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="yuantu" value="<?php echo $_smarty_tpl->tpl_vars['fileurl']->value;?>
-">
+                                    <input type="text" class="form-control" id="yuantu" value="~$fileurl~~">
                                 </div>
-                                <div class="col-md-2"> <a id="fuzhi" data-clipboard-target="yuantu" class="btn btn-raised btn-primary" data-content="复制成功" data-toggle="snackbar" data-timeout="2000">复制</a>
+                                <div class="col-md-2"><a id="fuzhi" data-clipboard-target="yuantu" class="btn btn-raised btn-primary" data-content="复制成功" data-toggle="snackbar" data-timeout="2000">复制</a>
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="dy">
                             <div class="row">
                                 <div class="col-md-2">
-                                    <lable>HTML调用：</lable>
+                                    <lable>APlayer：</lable>
                                 </div>
                                 <div class="col-md-8">
-                                    <textarea id="htmldy" rows="3" class="form-control">&lt;img src=&quot;<?php echo $_smarty_tpl->tpl_vars['fileurl']->value;?>
-&quot; alt=&quot;<?php echo $_smarty_tpl->tpl_vars['filename']->value;?>
-&quot; &gt;</textarea>
+                                    <textarea id="htmldy" rows="3" class="form-control">&lt;iframe src=&quot;~$zzurl~~views/player.php?key=~$key~~&quot; width=&quot;407&quot; scrolling=&quot;no&quot;frameborder=&quot;0&quot;height=&quot;70&quot;&gt;&lt;/iframe&gt;</textarea>
                                 </div>
-                                <div class="col-md-2"> <a id="fuzhi1" data-clipboard-target="htmldy" class="btn btn-raised btn-primary" data-content="复制成功" data-toggle="snackbar" data-timeout="2000">复制</a>
+                                <div class="col-md-2"><a id="fuzhi1" data-clipboard-target="htmldy" class="btn btn-raised btn-primary" data-content="复制成功" data-toggle="snackbar" data-timeout="2000">复制</a>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-2">
-                                    <lable>Markdown调用:</lable>
+                                    <lable>HTML5播放器：</lable>
                                 </div>
                                 <div class="col-md-8">
-                                    <textarea id="mddy" rows="3" class="form-control">![<?php echo $_smarty_tpl->tpl_vars['filename']->value;?>
-](<?php echo $_smarty_tpl->tpl_vars['fileurl']->value;?>
-)</textarea>
+                                    <textarea id="mddy" rows="3" class="form-control">&lt;audio src=&quot;~$fileurl~~&quot; controls=&quot;controls&quot;&gt;  &lt;/audio&gt;</textarea>
                                 </div>
-                                <div class="col-md-2"> <a id="fuzhi2" data-clipboard-target="mddy" class="btn btn-raised btn-primary" data-content="复制成功" data-toggle="snackbar" data-timeout="2000">复制</a>
+                                <div class="col-md-2"><a id="fuzhi2" data-clipboard-target="mddy" class="btn btn-raised btn-primary" data-content="复制成功" data-toggle="snackbar" data-timeout="2000">复制</a>
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="qrcode">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <img style="width:100%;" src="https://api.lwl12.com/img/qrcode/get?ct=<?php echo $_smarty_tpl->tpl_vars['fileurl']->value;?>
-">
+                                    <img style="width:100%;" src="https://api.lwl12.com/img/qrcode/get?ct=~$fileurl~~">
                                     <div align="center">原图外链</div>
                                 </div>
                                 <div class="col-md-3">
-                                    <img style="width:100%;" src="https://api.lwl12.com/img/qrcode/get?ct=<?php echo $_smarty_tpl->tpl_vars['zzurl']->value;?>
-views/pic.php?key=<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
-">
+                                    <img style="width:100%;" src="https://api.lwl12.com/img/qrcode/get?ct=~$zzurl~~views/pic.php?key=~$key~~">
                                     <div align="center">当前页面</div>
                                 </div>
                                 <div class="col-md-6">
@@ -172,13 +150,11 @@ views/pic.php?key=<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <input type="text" class="form-control" id="fname" name="fname">
-                                                    <div class="input-group-addon">.<?php echo $_smarty_tpl->tpl_vars['filetype']->value;?>
-</div>
+                                                    <div class="input-group-addon">.~$filetype~~</div>
                                                 </div>
                                             </div>
                                             <input style="display:none;" id="ftype" name="ftype" value="open" type="text" />
-                                            <input style="display:none;" id="fkey" name="fkey" value="<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
-" type="text" />
+                                            <input style="display:none;" id="fkey" name="fkey" value="~$key~~" type="text" />
                                         </div>
                                 </form>
                                 <div class="col-md-2">
@@ -211,13 +187,11 @@ views/pic.php?key=<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <input type="text" class="form-control" id="fname" name="fname">
-                                                    <div class="input-group-addon">.<?php echo $_smarty_tpl->tpl_vars['filetype']->value;?>
-</div>
+                                                    <div class="input-group-addon">.~$filetype~~</div>
                                                 </div>
                                             </div>
                                             <input style="display:none;" id="ftype" name="ftype" value="lock" type="text" />
-                                            <input style="display:none;" id="fkey" name="fkey" value="<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
-" type="text" />
+                                            <input style="display:none;" id="fkey" name="fkey" value="~$key~~" type="text" />
                                         </div>
                                 </form>
                                 <div class="col-md-2">
@@ -248,24 +222,37 @@ views/pic.php?key=<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
             <br>
         </div>
         <div class="col-md-3">
-          <?php echo $_smarty_tpl->getSubTemplate ("side.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('titm'=>$_smarty_tpl->tpl_vars['tit']->value,'head'=>$_smarty_tpl->tpl_vars['head']->value,'zzurl'=>$_smarty_tpl->tpl_vars['zzurl']->value,'isvisitor'=>$_smarty_tpl->tpl_vars['isVisitor']->value,'userinfo'=>$_smarty_tpl->tpl_vars['userinfo']->value), 0);?>
-
+     ~include file="side.html" titm = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
         </div>
-    </div><?php echo $_smarty_tpl->getSubTemplate ("footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('titm'=>$_smarty_tpl->tpl_vars['tit']->value,'head'=>$_smarty_tpl->tpl_vars['head']->value,'zzurl'=>$_smarty_tpl->tpl_vars['zzurl']->value,'isvisitor'=>$_smarty_tpl->tpl_vars['isVisitor']->value,'userinfo'=>$_smarty_tpl->tpl_vars['userinfo']->value), 0);?>
-
-    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['zzurl']->value;?>
-content/themes/material/js/ZeroClipboard.js"></script>
+    </div>~include file="footer.html" titm = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+    <script type="text/javascript" src="~$zzurl~~content/themes/material/js/ZeroClipboard.js"></script>
+    <script src="~$zzurl~~includes/APlayer/APlayer.min.js"></script>
     <script type="text/javascript">
-        load = "0";
+   var ap1 = new APlayer({
+    element: document.getElementById('aplayer'),
+    narrow: false,
+    autoplay: true,
+    showlrc: false,
+    mutex: true,
+    theme: '#b2dae6',
+    music: {
+        title: '~$filename~~',
+        author: '',
+        url: '~$fileurl~~',
+        
+    }
+});
 
+ap1.init();
+
+var load ="0";
         function xiangqing() {
             $("#guanli").hide();
             $("#fileurl").hide();
             $("#filecode").hide();
             $("#xiangqing").show();
             if (load == "0") {
-                $.get("../includes/getinfo.php?key=<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
-", function(data, status) {
+                $.get("../includes/getinfo.php?key=~$key~~", function(data, status) {
                     var xqq = data.split(".");
                     $("#file_hash").html(xqq[1]);
                     $("#file_size").html(xqq[0]);
@@ -289,8 +276,7 @@ content/themes/material/js/ZeroClipboard.js"></script>
                 var code = ge[2];
                 if (result == "ok") {
                     if (ftype == "open") {
-                        $('#fxurl').val("<?php echo $_smarty_tpl->tpl_vars['zzurl']->value;?>
-" + ge[3] + "." + ge[4]);
+                        $('#fxurl').val("~$zzurl~~" + ge[3] + "." + ge[4]);
                         $("#gk").hide();
                         $("#result_open").show();
                         $.snackbar({
@@ -317,12 +303,10 @@ content/themes/material/js/ZeroClipboard.js"></script>
                 if (result == "ok") {
                     if (ftype == "open") {} else {
                         var pwd = ge[3];
-                        $('#fxurl-lock').val("<?php echo $_smarty_tpl->tpl_vars['zzurl']->value;?>
-" + ge[4] + "." + ge[5]);
+                        $('#fxurl-lock').val("~$zzurl~~" + ge[4] + "." + ge[5]);
                         $('#pwd-lock').val("密码：" + pwd);
                         $("#sm").hide();
-                        $("#fuzhi4").attr("data-clipboard-text", "链接：<?php echo $_smarty_tpl->tpl_vars['zzurl']->value;?>
-" + ge[4] + "." + ge[5] + "  密码：" + pwd);
+                        $("#fuzhi4").attr("data-clipboard-text", "链接：~$zzurl~~" + ge[4] + "." + ge[5] + " 密码：" + pwd);
                         $("#result_lock").show();
                         $.snackbar({
                             content: "创建成功",
@@ -344,8 +328,7 @@ content/themes/material/js/ZeroClipboard.js"></script>
             if (!returnVal) {} else {
                 $("#s2").attr("disabled", true);
                 $.post("../includes/delete_file.php", {
-                    key: "<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
-"
+                    key: "~$key~~"
                 }, function(data) {
                     var pe = data.split(".");
                     if (pe[0] == "ok") {
@@ -354,8 +337,7 @@ content/themes/material/js/ZeroClipboard.js"></script>
                             timeout: 2000
                         });
                         setTimeout(function() {
-                            window.location = "<?php echo $_smarty_tpl->tpl_vars['zzurl']->value;?>
-"
+                            window.location = "~$zzurl~~"
                         }, 2000);
                     } else {
                         $.snackbar({
@@ -373,8 +355,7 @@ content/themes/material/js/ZeroClipboard.js"></script>
             if (!returnVal1) {} else {
                 $("#s1").attr("disabled", true);
                 $.post("../includes/delete_share.php", {
-                    key: "<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
-"
+                    key: "~$key~~"
                 }, function(data) {
                     var pe1 = data.split(".");
                     if (pe1[0] == "ok") {
@@ -393,4 +374,4 @@ content/themes/material/js/ZeroClipboard.js"></script>
                 });
             }
         }
-    </script><?php }} ?>
+    </script>
