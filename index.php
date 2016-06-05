@@ -66,10 +66,11 @@ $smarty->assign("userinfo", $userInfo);
 $smarty->assign("des", $des);
 $smarty->assign("kw", $kw);
 $smarty->assign("notice", $notice);
-$smarty->assign("tit", $tit."-".$tit1); 
+$smarty->assign("titmain", $tit."-".$tit1); 
+$smarty->assign("tit", $tit); 
 $smarty->assign("head", $head); 
 $smarty->assign("static", $staticFile); 
-$smarty->assign("jscode", $jscode); 
+$smarty->assign("jscode", 'Powerd by <a target="_blank" href="http://aoaoao.me">树洞外链</a> '.$jscode); 
 $smarty->display("index.html");  
 
 ?>

@@ -3,13 +3,12 @@
 <html>
 
 <head>
-  <title>~$tit~~</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <!-- Mobile support -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>~$tit~~</title> 
+  <title>~$titmain~~</title> 
   <!-- Bootstrap Material Design -->
   <link href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="content/themes/material/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +22,7 @@
 <script type="text/javascript" src="content/themes/material/js/ui.js"></script>
   </head>
   <body id="laru">
-  ~include file="head.html" head=$head zzurl=$zzurl  isvisitor=$isVisitor userinfo=$userinfo~~
+  ~include file="head.html"  titmain = $titmain head=$head zzurl=$zzurl  isvisitor=$isVisitor userinfo=$userinfo~~
  <div class="container">
  <div class="page-header" id="banner">
     <div class="row">
@@ -75,18 +74,4 @@
     </div>
   </div>
   </div>
-       <footer class="footer">
-      <div class="container">
-        <p class="text-muted">   ~$jscode~~ </p>
-      </div>
-    </footer>
-~$head~~
-<script src="content/themes/material/js/bootstrap.min.js"></script>
-<script src="content/themes/material/js/material.min.js"></script>
-
-<script src="content/themes/material/js/ripples.min.js"></script>
-<script>
-  $.material.init();
-</script>
-  </body>
-  </html>
+    ~include file="footer.html"  titm = $tit head=$head zzurl=$zzurl  isvisitor=$isVisitor userinfo=$userinfo~~
