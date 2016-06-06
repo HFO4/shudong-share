@@ -48,15 +48,15 @@ if($policyType!="qiniu"){
 	$filePart = "4";
 }
 $smarty->template_dir = "content/themes/".$theme;
-$head ='<script type="text/javascript" src="includes/js/jquery-1.9.1.min.js"></script>
+$head ='
+<meta name="description" content="'.$des.'" />
+<meta name="keywords" content="'.$kw.'" />';
+$staticFile = '<script type="text/javascript" src="includes/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="includes/js/plupload/plupload.full.min.js"></script>
 <script type="text/javascript" src="includes/js/plupload/i18n/zh_CN.js"></script>
 <script type="text/javascript" src="includes/js/qiniu.js"></script>
 <script type="text/javascript" src="includes/js/main.js"></script>
-<script type="text/javascript" src="includes/js/ui.js"></script>
-<meta name="description" content="'.$des.'" />
-<meta name="keywords" content="'.$kw.'" />';
-
+<script type="text/javascript" src="includes/js/ui.js"></script>';
 $jscode = $tjcode.'
 <script type="text/javascript">
 var autoname='.$autoName.';'.$fileType.'; var max='.$fileSize.'; var fp="'.$filePart.'"; var upserver ="'.$upServer.'";var policyType="'.$policyType.'"</script>';
@@ -66,9 +66,11 @@ $smarty->assign("userinfo", $userInfo);
 $smarty->assign("des", $des);
 $smarty->assign("kw", $kw);
 $smarty->assign("notice", $notice);
-$smarty->assign("tit", $tit."-".$tit1); 
+$smarty->assign("titmain", $tit."-".$tit1); 
+$smarty->assign("tit", $tit); 
 $smarty->assign("head", $head); 
-$smarty->assign("jscode", $jscode); 
+$smarty->assign("static", $staticFile); 
+$smarty->assign("jscode", 'Powerd by <a target="_blank" href="http://aoaoao.me">树洞外链</a> '.$jscode); 
 $smarty->display("index.html");  
 
 ?>

@@ -17,9 +17,8 @@ function curl_post($url, $post) {
 function inject_check($Sql_Str) {
     $check=preg_match('/select|insert|update|delete|\'|\\*|\*|\.\.\/|\.\/|union|into|load_file|outfile/i',$Sql_Str);
     if ($check) {
-   return "bad";
-   echo"SQL checking failed";
-   exit();
+   
+   exit;
     }else{
         return "ok";
     }

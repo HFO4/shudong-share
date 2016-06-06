@@ -127,7 +127,7 @@ $.post("../includes/set_theme.php",{biaoshi:id},
 iosOverlay({
 		text: "设置成功",
 		duration: 2e3,
-		icon: "./../content/themes/default/images/check.png"
+		icon: "images/check.png"
 		
 	});
 	 location.reload();

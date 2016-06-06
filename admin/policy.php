@@ -240,7 +240,7 @@ $.post("../includes/adminAction.php", $("#setting").serialize()+"&action=saveset
 iosOverlay({
 		text: "保存成功",
 		duration: 2e3,
-		icon: "./../content/themes/default/images/check.png"
+		icon: "images/check.png"
 	});
 	
 	}
@@ -283,7 +283,7 @@ function saveedit(){
   iosOverlay({
     text: "修改成功",
     duration: 2e3,
-    icon: "../content/themes/default/images/check.png"
+    icon: "images/check.png"
   });
   window.location.reload();
     }else{ 

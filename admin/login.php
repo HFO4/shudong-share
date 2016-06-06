@@ -7,11 +7,11 @@
   <meta name="renderer" content="webkit" /> 
       <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="favicon.ico" rel="shortcut icon" /> 
-  <link rel="stylesheet" href="../content/themes/default/bootstrap/css/bootstrap.css" /> 
+  <link rel="stylesheet" href="css/bootstrap.min.css" /> 
   <link rel="stylesheet" href="css/login.css" />
  </head>
         <script type="text/javascript" src="../includes/js/jquery-1.9.1.min.js"></script>
-          <script type="text/javascript" src="../content/themes/default/bootstrap/js/bootstrap.min.js"></script> 
+          <script type="text/javascript" src="js/bootstrap.min.js"></script> 
 
 
 

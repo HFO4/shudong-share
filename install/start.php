@@ -5,10 +5,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>树洞外链安装向导-填写信息</title>
 </head>
-	<link rel="stylesheet" href="../content/themes/default/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="../admin/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/ystep.css">
     <script type="text/javascript" src="../includes/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="../content/themes/default/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../admin/js/bootstrap.min.js"></script>
 <script src="js/ystep.js"></script>
 <style>
 .b{ 

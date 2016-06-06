@@ -278,7 +278,7 @@ function saveedit(){
   iosOverlay({
     text: "修改成功",
     duration: 2e3,
-    icon: "../content/themes/default/images/check.png"
+    icon: "images/check.png"
   });
   window.location.reload();
     }else{ 
@@ -403,7 +403,7 @@ function addgroup(){
   iosOverlay({
     text: "添加成功",
     duration: 2e3,
-    icon: "../content/themes/default/images/check.png"
+    icon: "images/check.png"
   });
     }else{ 
 alert(pe[1]);

@@ -1,0 +1,52 @@
+ 
+  <div class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="~$zzurl~~"></a>
+              </div>
+              <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                  <li ><a href="~$zzurl~~index.php"><i class="fa fa-home" aria-hidden="true"></i> 首页</a></li>
+               
+                  <li><a href="~$zzurl~~views/pages.php?id=explore"><i class="fa fa-cloud" aria-hidden="true"></i> 文件广场</a></li>
+   ~if $isvisitor eq "true"~~
+   ~else~~ 
+     <li><a href="~$zzurl~~views/userIndex.php"><i class="fa fa-users" aria-hidden="true"></i> 用户中心</a></li>
+     <li><a href="~$zzurl~~views/userFiles.php"><i class="fa fa-file " aria-hidden="true"></i> 我的文件</a></li>
+                  <li class="dropdown"><a href="#"class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-share-alt" aria-hidden="true"></i> 我的分享 <b class="caret"></b></a>
+                  
+                 
+                    <ul class="dropdown-menu">
+                    <li><a href="~$zzurl~~/views/userShares.php"><i class="fa fa-eye " aria-hidden="true"></i> 公开分享</a></li>
+                       <li><a href="~$zzurl~~/views/userSharesS.php"><i class="fa fa-eye-slash " aria-hidden="true"></i> 私密分享</a></li>
+                    </ul></li>
+                  
+   ~/if~~
+                </ul>
+       
+                <ul class="nav navbar-nav navbar-right">
+                          ~if $isvisitor eq "true"~~
+            <li><a href="~$zzurl~~views/login.php"><i class="fa fa-user" aria-hidden="true"></i> 登录/注册</a></li>
+                       ~else~~
+
+
+         <li class="dropdown">
+                    <a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user " aria-hidden="true"></i> ~$userinfo['username']~~
+                      <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="~$zzurl~~/views/userIndex.php"><i class="fa fa-book " aria-hidden="true"></i> 个人资料</a></li>
+                      <li><a href="~$zzurl~~/views/userPassWord.php"><i class="fa fa-lock " aria-hidden="true"></i> 修改密码</a></li>
+                      <li><a href="~$zzurl~~/includes/userAction.php?action=logout"><i class="fa fa-share " aria-hidden="true"></i> 登出</a></li>
+
+                    </ul>
+                  </li>
+                       ~/if~~
+                </ul>
+              </div>
+            </div>
+            </div>

@@ -32,7 +32,7 @@ $kjurl= $row['kjurl'];
     <title>文件列表</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../content/themes/default/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
  
 
@@ -55,14 +55,14 @@ $kjurl= $row['kjurl'];
         <script type="text/javascript" src="../includes/js/jquery-1.9.1.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-          <script type="text/javascript" src="../content/themes/default/bootstrap/js/bootstrap.min.js"></script> 
+          <script type="text/javascript" src="js/bootstrap.min.js"></script> 
 
 
     <!-- Morris Charts JavaScript -->
 
 
-      <link rel="stylesheet" href="../content/themes/default/bootstrap/css/iosOverlay.css" /> 
-    <script type="text/javascript" src="../content/themes/default/js/iosOverlay.js"></script>
+      <link rel="stylesheet" href="css/iosOverlay.css" /> 
+    <script type="text/javascript" src="js/iosOverlay.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/sb-admin-2.js"></script>
     <style>
@@ -161,7 +161,7 @@ $line3="SELECT * FROM `sd_policy`  WHERE id = '$pid'";
  <tr>
   <td><input type="checkbox"name="file"value="'.$row["key1"].'"  /></td>
  	<td>'.$row["id"].'</td>
-	<td><a href="../views/fileJump.php?ming='.$row['ming'].'&key='.$row['key1'].'" target="new" >'.$row["ming"].'</a></td>
+	<td><a href="../views/fileJump.php?ming='.htmlspecialchars($row['ming'],ENT_QUOTES,utf-8).'&key='.$row['key1'].'" target="new" >'.htmlspecialchars($row['ming'],ENT_QUOTES,utf-8).'</a></td>
 	<td>'.$row["uploadtime"].'</td>
 	<td><a href="user.php?page=1&s=10&search='.$username.'"target="_blank">'.$username.'</a></td>
     <td>'.$policy.'</td>

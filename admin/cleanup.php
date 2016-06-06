@@ -107,7 +107,7 @@ $.post("../includes/adminAction.php", {action:'cleantemp'},
 iosOverlay({
 		text: "清理完成",
 		duration: 2e3,
-		icon: "./../content/themes/default/images/check.png"
+		icon: "images/check.png"
 	});
 	
 	}
@@ -149,7 +149,7 @@ $.post("../includes/adminAction.php", {action:'cleansql'},
 iosOverlay({
 		text: "清理完成",
 		duration: 2e3,
-		icon: "./../content/themes/default/images/check.png"
+		icon: "images/check.png"
 	});
 	
 	

@@ -136,7 +136,7 @@ $zzurl= $row['zzurl'];
    
                     </div>
                  <div class="col-lg-5" align="left">
-           <button class="btn btn-lg btn-primary" id="save">保存更改</button>
+           <button class="btn btn-lg btn-primary" onclick="save()">保存更改</button>
                     </div>
                     <div class="col-lg-3" align="right">
         

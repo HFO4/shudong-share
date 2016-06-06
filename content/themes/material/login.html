@@ -1,0 +1,64 @@
+~include file="header.html" tit = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+
+<title>登录 - ~$tit~~</title>~include file="head.html" tit = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+<style type="text/css">
+ 
+</style>
+<div class="container">
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<br><br><br>
+<div class="well bs-component" id="loginform">
+ <legend>登录</legend>
+ <form id="login"class="dd">
+ <div style="display: none;">
+                          <input type="text" name="action"value="login">
+                        </div>
+                        <div class="form-group label-floating">
+  <label class="control-label" for="focusedInput1">邮箱</label>
+  <input class="form-control" name="username" type="text">
+</div>
+<div style="height: 8px;"></div>
+                      <div class="form-group label-floating">
+  <label class="control-label" for="focusedInput1">密码</label>
+  <input class="form-control" name="password" type="password">
+</div>
+
+<a class="btn btn-raised btn-block btn-primary"id="login-button"onclick="login();">登陆</a>
+<a class="btn btn-primary btn-block" onclick="showreg();">没有账号？立即注册</a>
+
+ </form>
+</div>
+<div class="well bs-component" id="regform"style="display: none;">
+ <legend>注册</legend>
+ <form id="reg"class="dd">
+ <div style="display: none;">
+                          <input type="text" name="action"value="register">
+                        </div>
+                        <div class="form-group label-floating">
+  <label class="control-label" for="focusedInput1">邮箱</label>
+  <input class="form-control" name="username-reg" type="text">
+</div>
+<div style="height: 8px;"></div>
+                      <div class="form-group label-floating">
+  <label class="control-label" for="focusedInput1"></label>
+  <input class="form-control" name="password-reg" placeholder="密码，长度4-16字符"type="password">
+</div><div style="height: 8px;"></div>
+                 <div class="form-group label-floating">
+  <label class="control-label" for="focusedInput1">再输一次密码</label>
+  <input class="form-control" name="password-check" type="password">
+</div>
+<a class="btn btn-raised btn-block btn-primary"id="login-button"onclick="reg();">注册</a>
+<a class="btn btn-primary btn-block"onclick="showlogin();">返回登陆</a>
+
+ </form>
+</div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    </div>
+    <br><br><br>
+    ~include file="footer.html" titm = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+    <script type="text/javascript" src="~$zzurl~~content/themes/material/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="~$zzurl~~content/themes/material/js/login.js"></script> 

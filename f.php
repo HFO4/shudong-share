@@ -27,7 +27,7 @@ if(mysqli_num_rows($cha)=="0"){
 	exit();
 }
 while($row1 = mysqli_fetch_assoc($cha)){ 
-	$fname= $row1['fname'];
+	$fname= htmlspecialchars($row1['fname'],ENT_QUOTES,'utf-8');
 	$key1= $row1['filekey'];
 	$sstime= $row1['sstime'];
 	$num= $row1['downloadnum'];
@@ -38,7 +38,7 @@ $cha2=mysqli_query($con,"SELECT * FROM sd_file where key1 = '$key1'");
 while($row2 = mysqli_fetch_assoc($cha2)){ 
 	$policyId = $row2['policyid'];
 	$uploadUser = $row2['upuser'];
-	$ming= $row2['ming'];
+	$ming= htmlspecialchars($row2['ming'],ENT_QUOTES,'utf-8');
 	$array = explode(".",$ming);//分割文件名
 	$filetype=end($array);//获取文件扩展名
 
