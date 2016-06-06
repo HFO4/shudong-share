@@ -76,7 +76,7 @@
   </div>
   
     ~include file="footer.html"  titm = $tit head=$head zzurl=$zzurl  isvisitor=$isVisitor userinfo=$userinfo~~
-~if $isVisitor eq "true"~~ 
+~if $notice eq ""~~ 
 ~else~~
 <script type="text/javascript" src="~$zzurl~~content/themes/material/js/ZeroClipboard.js"></script>
 <script type="text/javascript">
