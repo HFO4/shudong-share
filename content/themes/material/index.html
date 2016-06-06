@@ -74,4 +74,13 @@
     </div>
   </div>
   </div>
+  
     ~include file="footer.html"  titm = $tit head=$head zzurl=$zzurl  isvisitor=$isVisitor userinfo=$userinfo~~
+~if $isVisitor eq "true"~~ 
+~else~~
+<script type="text/javascript" src="~$zzurl~~content/themes/material/js/ZeroClipboard.js"></script>
+<script type="text/javascript">
+$(function() {
+            $.snackbar({content: " ~$notice~~", timeout: 10000});
+        });</script>
+        ~/if~~
