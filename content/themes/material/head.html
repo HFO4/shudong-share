@@ -13,11 +13,11 @@
                 <ul class="nav navbar-nav">
                   <li ><a href="~$zzurl~~index.php"><i class="fa fa-home" aria-hidden="true"></i> 首页</a></li>
                
-                  <li><a href="#"><i class="fa fa-cloud" aria-hidden="true"></i> 文件广场</a></li>
+                  <li><a href="~$zzurl~~views/pages.php?id=explore"><i class="fa fa-cloud" aria-hidden="true"></i> 文件广场</a></li>
    ~if $isvisitor eq "true"~~
    ~else~~ 
      <li><a href="~$zzurl~~views/userIndex.php"><i class="fa fa-users" aria-hidden="true"></i> 用户中心</a></li>
-     <li><a href="~$zzurl~~/views/userFiles.php"><i class="fa fa-file " aria-hidden="true"></i> 我的文件</a></li>
+     <li><a href="~$zzurl~~views/userFiles.php"><i class="fa fa-file " aria-hidden="true"></i> 我的文件</a></li>
                   <li class="dropdown"><a href="#"class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-share-alt" aria-hidden="true"></i> 我的分享 <b class="caret"></b></a>
                   
                  

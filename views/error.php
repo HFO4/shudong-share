@@ -19,6 +19,7 @@ $tit1= $row['tit_2'];
 $theme= $row['theme'];
 $des= $row['desword'];
 $kw= $row['keyword'];
+$url = $row['zzurl'];
 $tjcode= $row['tjcode'];
 }
 $jscode=$tjcode;

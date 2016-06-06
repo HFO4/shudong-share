@@ -1,0 +1,59 @@
+~include file="header.html" tit = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+<title>文件广场 - ~$tit~~</title>~include file="head.html" tit = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+<style type="text/css">
+</style>
+<div class="container">
+    <div class="well bs-component">
+        <h1>文件广场</h1>
+       <table class="table table-striped table-hover ">
+            <thead>
+                <tr>
+                    <th>
+                        #
+                    </th>
+                    <th>分享文件名</th>
+                  
+                    <th>下载次数</th>
+                    <th>分享日期</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>~section loop=$filedata name=two~~
+                <tr>
+                    
+                     <td>~$filedata[two].id~~</td>
+                   
+                    <td>~$filedata[two].fname~~.~$filedata[two].ftype~~</td>
+                   
+                    <td>~$filedata[two].downloadnum~~</td>
+                    <td>~$filedata[two].sstime~~</td>
+                    <td><a href="../f.php?k=~$filedata[two].sskey~~" target="_blank">查看</a>
+                    </td>
+                    </td>~sectionelse~~ ~/section~~</tbody>
+        </table>
+        <div class="row">
+        <div class="col-md-6"><br>~$jilu~~</div>
+        <div class="col-md-6"><nav>
+  <ul class="pagination pagination-sm"style="float:right;">
+    <li>
+      <a href="~$pre~~" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    
+  ~$fy~~
+ 
+    <li>
+      <a href="~$ne~~" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav></div>
+</div>
+    </div>~include file="footer.html" titm = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+    <script type="text/javascript" src="~$zzurl~~content/themes/material/js/ZeroClipboard.js"></script>
+    <script language="JavaScript">
+ $("a[href='#").parent().addClass("active");
+    </script>
+   

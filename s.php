@@ -54,7 +54,7 @@ $smarty->display("lock.html");  // 输出页面
 
 
 while($row1 = mysqli_fetch_assoc($cha)){ 
-	$fname= htmlspecialchars($row1['fname'],ENT_QUOTES,utf-8);
+	$fname= htmlspecialchars($row1['fname'],ENT_QUOTES,'utf-8');
 	$key1= $row1['filekey'];
 	$sstime= $row1['sstime'];
 	$num= $row1['downloadnum'];
@@ -63,7 +63,7 @@ while($row1 = mysqli_fetch_assoc($cha)){
 	$cha2=mysqli_query($con,"SELECT * FROM sd_file where key1 = '$key1'");
 while($row2 = mysqli_fetch_assoc($cha2))
   { 
-	$ming= htmlspecialchars($row2['ming'],ENT_QUOTES,utf-8);
+	$ming= htmlspecialchars($row2['ming'],ENT_QUOTES,'utf-8');
 	$policyId = $row2['policyid'];
 	$array = explode(".",$ming);//分割文件名
 	$filetype=end($array);//获取文件扩展名

@@ -1,0 +1,29 @@
+~include file="header.html" tit = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+
+<title>~$tit2~~ - ~$tit~~</title>~include file="head.html" tit = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+<style type="text/css">
+    .footer{
+            position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+
+    }
+</style>
+<div class="container">
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<br><br><br>
+<div class="well bs-component" id="loginform">
+ <legend>:( 发生了一个错误</legend>
+ ~$message~~
+</div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    </div>
+    <br><br><br>
+    ~include file="footer.html" titm = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
+    <script type="text/javascript" src="~$zzurl~~content/themes/material/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="~$zzurl~~content/themes/material/js/login.js"></script> 

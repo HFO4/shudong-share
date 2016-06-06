@@ -36,7 +36,7 @@ while($row2 = mysqli_fetch_assoc($result2)){
 foreach($fileData as $key=>$val) {
 	if (is_array($val)) { 
 		foreach($val as $key1=>$val) {
-			$fileData[$key][$key1] = htmlspecialchars($val,ENT_QUOTES,utf-8);
+			$fileData[$key][$key1] = htmlspecialchars($val,ENT_QUOTES,'utf-8');
 		}
 	}
 }

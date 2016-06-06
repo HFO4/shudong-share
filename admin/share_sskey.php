@@ -136,7 +136,7 @@ $pagenum=ceil($num/$pagesize);
 		
  $query1=mysqli_query($con,$juju);
     while($row1=mysqli_fetch_assoc($query1)){  
-		  $ming=htmlspecialchars($row1['ming'],ENT_QUOTES,utf-8);
+		  $ming=htmlspecialchars($row1['ming'],ENT_QUOTES,'utf-8');
 	  }
    echo '
  <tr>
