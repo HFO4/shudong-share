@@ -25,6 +25,9 @@ $tjcode= $row['tjcode'];
 .h3 {
 	font-family: "微软雅黑";
 }
+.thumbnail .caption {
+	word-wrap: break-word;
+}
 </style>
 <body>
           <?php
