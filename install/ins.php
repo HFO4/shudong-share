@@ -190,9 +190,6 @@ $sqlport="'.$sqlport.'";//数据库端口
 ?>';
 fputs($fopen1,$val);//向文件中写入内容; 
 fclose($fopen1); 
-unlink("../index.php");
-
-rename('../index_s.php','../index.php');
 
 function delDirAndFile( $dirName )  
 {  

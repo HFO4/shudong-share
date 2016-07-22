@@ -206,7 +206,7 @@ echo substr($mulu,0,-7);
             <div class="panel panel-default">
           <div class="panel-heading">关于</div>
           <div class="panel-body" >
-  程序版本：2.3<br />作者博客：<a href="https://aoaoao.me" target="new">树洞分享</a>
+  程序版本：2.4.1<br />作者博客：<a href="https://aoaoao.me" target="new">树洞分享</a>
   <br />E-mail:abslant@126.com<br />QQ:912394456<br />感谢您的使用！
           </div>
         </div>
