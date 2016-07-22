@@ -9,6 +9,8 @@
   <link href="favicon.ico" rel="shortcut icon" /> 
   <link rel="stylesheet" href="css/bootstrap.min.css" /> 
   <link rel="stylesheet" href="css/login.css" />
+    <link href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
  </head>
         <script type="text/javascript" src="../includes/js/jquery-1.9.1.min.js"></script>
           <script type="text/javascript" src="js/bootstrap.min.js"></script> 
@@ -30,14 +32,14 @@
 		  <div class="form-group" >
 		    <label class="sr-only" for="exampleInputAmount">username</label>
 		    <div class="input-group">
-		      <div class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
+		      <div class="input-group-addon"><span class="fa fa-user" aria-hidden="true"></span></div>
 		      <input style="width:245px;"type="text" class="form-control" name="username" placeholder="用户名">
 		    </div>
 		  </div>
 		    <div class="form-group">
 		    <label class="sr-only" for="exampleInputAmount">username</label>
 		    <div class="input-group">
-		      <div class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></div>
+		      <div class="input-group-addon"><span class="fa fa-lock" aria-hidden="true"></span></div>
 		      <input type="password" style="width:245px;"class="form-control" name="password" placeholder="密码">
 		    </div>
 		  </div>
