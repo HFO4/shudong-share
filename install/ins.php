@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `sd_setting` (
   `notice` text COLLATE utf8_bin NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 INSERT INTO `sd_setting` (`id`, `main_tit`, `tit_2`, `keyword`, `desword`, `kjming`, `ak`, `sk`, `kjurl`, `zzurl`, `admin_name`, `admin_password`, `theme`, `upload_minetype`, `upload_size`, `upload_fpsize`, `autoname`, `tjcode`, `morelimt`, `leixing`, `daxiao`, `share`, `version`, `notice`) VALUES
-(0, '树洞外链', '免费高速外链平台', '树洞, 树洞外链, 免费外链, 免费图床, QQ空间背景音乐, QQ空间背景音乐外链, 图片外链', '树洞, 树洞外链, 免费外链, 免费图床, QQ空间背景音乐, QQ空间背景音乐外链, 图片外链', '-', '-', '-', '-', '".$zzurl."', 'admin', '-', 'material', '-', '-', '-', '-', '', '-', '-', '-', 'true', '2.4 Alpha|12|12', '');
+(0, '树洞外链', '免费高速外链平台', '树洞, 树洞外链, 免费外链, 免费图床, QQ空间背景音乐, QQ空间背景音乐外链, 图片外链', '树洞, 树洞外链, 免费外链, 免费图床, QQ空间背景音乐, QQ空间背景音乐外链, 图片外链', '-', '-', '-', '-', '".$zzurl."', 'admin', '-', 'material', '-', '-', '-', '-', '', '-', '-', '-', 'true', '2.4.1|14|12', '');
 CREATE TABLE IF NOT EXISTS `sd_ss` (
   `id` int(11) NOT NULL,
   `sskey` text CHARACTER SET utf8 NOT NULL,
