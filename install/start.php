@@ -175,8 +175,8 @@ echo substr($mulu,0,-7);
           <div class="panel-heading">使用中遇到问题？加群解决！</div>
           <div class="panel-body" align="center">
           <br />
-     <a class="btn btn-lg btn-warning"style="width: 250px;" title="点击进行交流" target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=4722f16bcb7cc36a09e001c797f209b312db52be54a8ce26caf42621ca78c985">
-		使用交流群:64254928 
+     <a class="btn btn-lg btn-warning"style="width: 250px;" title="点击进行交流" target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=01f6d572bb750014df04c243b69fe722c4acd666e8e9a6a934691f55c03f05b6">
+		使用交流群:493870295 
 		</a><br /><br /><br />
           </div>
         </div>
