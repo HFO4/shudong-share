@@ -38,7 +38,7 @@ $version= explode("|",$row['version']);
   <p>程序版本：<?php echo $version['0'] ?>,&nbsp;&nbsp;版本代号：<?php echo $version[1] ?>;&nbsp;&nbsp;主题支持版本：<?php echo $version[2] ?></p>
   <p>作者博客：<a href="http://aoaoao.me" target="new">树洞</a>;
     &nbsp;&nbsp;E-mail:abslant@126.com;   &nbsp;&nbsp;QQ:912394456&nbsp;&nbsp;
-  技术支持QQ群：64254928</p>
+  技术支持QQ群：493870295</p>
   <p>GitHub项目主页：<a href="https://github.com/HFO4/shudong-share"target="_blank">shudong-share</a> (求个Star_(:зゝ∠)_)</p>
 
   <p>感谢您使用 树洞外链</p>
