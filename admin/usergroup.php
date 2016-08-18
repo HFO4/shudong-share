@@ -40,7 +40,7 @@ $tit1= $row['tit_2'];
 
    
     <label for="exampleInputName2">上传方案:</label><br>
-    <select name="gpolicy">
+    <select name="gpolicy" class="form-control">
 
 <?php
 $up="SELECT * FROM `sd_policy`";
@@ -69,7 +69,7 @@ $query5=mysqli_query($con,$up);
 
             <!-- /.row -->
             <div class="table-responsive">
-             <br>
+          
              <table class="table table-striped table-bordered table-hover">
               <thead>
                <tr>
@@ -140,7 +140,7 @@ $wj=mysqli_num_rows($wenjian_res);
       }
  ?>
 
-                      </tbody></table>
+                      </tbody></table></div>
 
   <button onclick="delall();"id="s"class="btn btn-danger"><i class="fa fa-times"></i> 删除选中用户组</button><br><br>
 
@@ -162,7 +162,7 @@ echo $pagesize
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
 <br><br>
-             <div style="float:left;position:relative; top:20px;"><h5>共有<?php echo $num ?>条记录&nbsp;&nbsp;当前第<?php echo $pageval ; ?>页，共<?php echo $pagenum ?>页</h5> </div>
+             <div style="float:left;position:relative; top:20px;left: 20px;"><h5>共有<?php echo $num ?>条记录&nbsp;&nbsp;当前第<?php echo $pageval ; ?>页，共<?php echo $pagenum ?>页</h5> </div>
                             <nav>
   <ul style="float:right;"class="pagination">
     <li>
@@ -203,7 +203,7 @@ echo $pagesize
         </div>
         <!-- /#page-wrapper -->
 
-    </div>
+    
     <!-- /#wrapper -->
 
     <!-- jQuery -->
@@ -235,7 +235,7 @@ echo $pagesize
     <div class="form-group">
              <label for="inputEmail3" class="col-sm-2 control-label">上传方案</label>
     <div class="col-sm-10">
-        <select name="epolicy" id="epolicy">
+        <select name="epolicy" id="epolicy" class="form-control">
 
 <?php
 $up="SELECT * FROM `sd_policy`";

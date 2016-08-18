@@ -93,7 +93,7 @@ $kjurl= $row['kjurl'];
   </div>
 </div>
                                      <div class="table-responsive">
-                                     <br>
+                                   
                                 <table class="table table-striped table-bordered table-hover">
                                     <thead>
                                         <tr>
@@ -180,14 +180,14 @@ $line3="SELECT * FROM `sd_policy`  WHERE id = '$pid'";
    ?>
                                 </tbody>
                                 </table>
-
+</div>
   <button onclick="delall();"id="s"class="btn btn-danger"><i class="fa fa-times"></i> 删除选中文件</button><br><br>
 
 <div class="row">
 
 <div class="col-lg-3">
   
-按上传方案查看：<select id="up">
+按上传方案查看：<select id="up" class="form-control" style="width: 20%">
 <option value ="all">全部</option>
 <?php
 $up="SELECT * FROM `sd_policy`";
@@ -250,7 +250,7 @@ echo $pagesize
 </nav>
 
 <br>
-                            </div>
+                            
                             <!-- /.table-responsive -->
                         </div>
                         <!-- /.panel-body -->
