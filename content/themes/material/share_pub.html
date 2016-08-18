@@ -50,16 +50,17 @@
   </div>
 </div>
      <div class="well infobox share">
-          <div class="fileheader">
-                        <div class="filepic">
+          <div class="row">
+          <div style="height: 8px"></div>
+                        <div class="col-md-2" align="center">
                             <img src="includes/filepic.php?t=~$filetype~~" height="80">
                         </div>
                         
-                        <div class="file">
-                        <div style="height:8px;"></div><h4 style="font-family: '微软雅黑';" >~$fname~~.~$filetype~~</h4>
+                        <div class="col-md-10">
+                     <h4 style="font-family: '微软雅黑';" >~$fname~~.~$filetype~~</h4>
                         <div id="info"style="color:#A6A6A6;margin-top:4px; ">Loading...</div>
                         </div></div>
-                        <br>
+                      
                         <div class="row">
                             <div class="col-sm-4"><a href="~$fileurl~~" download="~$fname~~.~$filetype~~"class="btn-block btn btn-raised btn-primary" id="d"><i class="fa fa-download" aria-hidden="true"></i> 下载</a></div>
                             <div class="col-sm-4"><a data-toggle="modal" data-target="#pre" href="javascript:void(0)" class="btn btn-block  btn-raised btn-warning"> <i class="fa fa-eye" aria-hidden="true"></i> 预览</a></div>
