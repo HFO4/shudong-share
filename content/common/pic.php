@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
  <head> 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-  <title>音频播放器 - <?php echo $tit ?></title> 
-      <link href="../includes/blue.monday/css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+  <title>图像预览 - <?php echo $tit ?></title> 
+    
  </head> 
  <body>
 
 <script type="text/javascript" src="./../includes/js/jquery-1.9.1.min.js"></script>
-        <script type="text/javascript" src="../includes/js/jquery.jplayer.min.js"></script>
+
   <style type="text/css">
  body {
  margin:0px 0px 0px 0px;
@@ -31,4 +31,7 @@ transition: all .2s ease-in-out;
 </style> 
 
 <div align="center">
-<img class="img-responsive " src="<?php echo $kjurl; ?>" /></div>
+<img class="img-responsive " id="img"src="<?php echo $kjurl; ?>" /></div>
+<script type="text/javascript">
+
+</script>
