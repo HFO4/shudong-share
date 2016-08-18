@@ -819,6 +819,8 @@ $zzurl= $row['zzurl'];
             <!--远程-->
 <form id="local-f" style="display: none">
                  <div class="row">
+                  <div class="alert alert-warning" role="alert"style="width: 85%;position: relative;left: 5%" ><strong>注意：由于PHP自身安全限制，使用本地上传默认无法传大文件，一般超过10MB时上传会卡死，如需大文件上传，请参考下面链接进行配置：<a href="http://yun.aoaoao.me/help.php#bigfile" target="new">http://yun.aoaoao.me/help.php#bigfile</a></strong>
+                    </div>
                 <div class="col-lg-2" align="right">
                  <label class="lab">上传方案名:</label>
                     </div>
