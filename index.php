@@ -46,7 +46,7 @@ if($policyType!="qiniu"){
 	}else if($policyType == "oss"){
 		$upServer = $serverUrl;
 	}else if ($policyType == 'upyun') {
-		$upServer = "http://v0.api.upyun.com/".$bucketName;
+		$upServer = "https://v0.api.upyun.com/".$bucketName;
 	}
 }else{
 	$fileType = 'var min="'.$fileType.'"';
