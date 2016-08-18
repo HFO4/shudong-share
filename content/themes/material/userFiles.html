@@ -5,6 +5,7 @@
 <div class="container">
     <div class="well bs-component">
         <h1>我的文件</h1>
+        <div class="table-responsive">
         <table class="table table-striped table-hover ">
             <thead>
                 <tr>
@@ -28,7 +29,7 @@
                     <td><a onclick="delfile('~$filedata[two].key1~~');" href="#">删除</a>
                     </td>
                     </td>~sectionelse~~ ~/section~~</tbody>
-        </table> <a href="javascript:void(0)" onclick="delall();" id="s" class="btn btn-raised btn-danger"><i class="fa fa-remove" aria-hidden="true"></i> 删除选中文件</a>
+        </table> </div><a href="javascript:void(0)" onclick="delall();" id="s" class="btn btn-raised btn-danger"><i class="fa fa-remove" aria-hidden="true"></i> 删除选中文件</a>
     </div>~include file="footer.html" titm = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
     <script type="text/javascript" src="~$zzurl~~content/themes/material/js/ZeroClipboard.js"></script>
     <script language="JavaScript">
