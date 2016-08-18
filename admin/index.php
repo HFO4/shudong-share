@@ -131,7 +131,7 @@ $("#ygg").html(data[0]);
                                 </div>
                             </div>
                         </div>
-                        <a href="user.php">
+                        <a href="user.php?s=10&page=1">
                             <div class="panel-footer">
                                 <span class="pull-left">查看详情</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
