@@ -32,7 +32,7 @@ $ak= $row['ak'];
 	$ver=$array1[1];
 }
 ?>
-<body onLoad='	$.getJSON("http://aoaoao.me/api/ygg.php?v=<?php echo $ver ?>&callback=?",  function(data){
+<body onLoad='	$.getJSON("https://aoaoao.me/api/ygg.php?v=<?php echo $ver ?>&callback=?",  function(data){
 	
 $("#ygg").html(data[0]);
 	
