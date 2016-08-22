@@ -43,7 +43,10 @@
 		      <input type="password" style="width:245px;"class="form-control" name="password" placeholder="密码">
 		    </div>
 		  </div>
-		  <button style="width:285px;"id="login-button"class="btn btn-primary" onclick="login();">登陆</button>
+		  <button style="width:285px;"id="login-button"class="btn btn-primary" onclick="login();">登陆</button><br><br>
+		  <div align="right">
+		  	<a href="https://yun.aoaoao.me/help.php#adminbad">忘记密码？</a>
+		  </div>
 		</form>
 	</div>
 </div>
