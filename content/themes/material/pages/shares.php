@@ -62,6 +62,6 @@ $smarty->assign("jilu", $jilu);
 $smarty->assign("pre", $pre); 
 $smarty->assign("ne", $ne); 
 $smarty->assign("filedata", $fileData); 
-$smarty->assign("jscode", 'Powerd by <a target="_blank" href="http://yun.aoaoao.me">树洞外链</a> '.$jscode); 
+$smarty->assign("jscode", 'Powered by <a target="_blank" href="http://yun.aoaoao.me">树洞外链</a> '.$jscode); 
 $smarty->display("fileAll.html");
 ?>

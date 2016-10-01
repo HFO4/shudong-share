@@ -24,6 +24,6 @@ $smarty->assign("zzurl", $url);
 $smarty->assign("isVisitor", $isVisitor); 
 $smarty->assign("userinfo", $userInfo); 
 $smarty->assign("head", $head); 
-$smarty->assign("jscode", 'Powerd by <a target="_blank" href="http://yun.aoaoao.me">树洞外链</a> '.$jscode); 
+$smarty->assign("jscode", 'Powered by <a target="_blank" href="http://yun.aoaoao.me">树洞外链</a> '.$jscode); 
 $smarty->display("login.html");  
 ?>

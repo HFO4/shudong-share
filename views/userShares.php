@@ -54,6 +54,6 @@ $smarty->assign("userinfo", $userInfo);
 $smarty->assign("head", $head); 
 $smarty->assign("filedata", $fileData); 
 $smarty->assign("mailhash", md5($userInfo['username'])); 
-$smarty->assign("jscode", 'Powerd by <a target="_blank" href="http://yun.aoaoao.me">树洞外链</a> '.$jscode); 
+$smarty->assign("jscode", 'Powered by <a target="_blank" href="http://yun.aoaoao.me">树洞外链</a> '.$jscode); 
 $smarty->display("userShares.html");  
 ?>

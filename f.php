@@ -66,6 +66,6 @@ $smarty->assign("userinfo", $userInfo);
 $smarty->assign("sskey", $share_key);
 $smarty->assign("sstime", $array1[0]);
 $smarty->assign("filetype", $filetype); //文件扩展名
-$smarty->assign("jscode", 'Powerd by <a target="_blank" href="http://aoaoao.me">树洞外链</a> '.$jscode); //应用模板头
+$smarty->assign("jscode", 'Powered by <a target="_blank" href="http://yun.aoaoao.me">树洞外链</a> '.$jscode); //应用模板头
 $smarty->display("share_pub.html");  // 输出页面
 ?>

@@ -77,7 +77,7 @@ $smarty->assign("tit", $tit);
 $smarty->assign("zzurl", $zzurl);
 $smarty->assign("head", $head); 
 $smarty->assign("static", $staticFile); 
-$smarty->assign("jscode", 'Powerd by <a target="_blank" href="http://aoaoao.me">树洞外链</a> '.$jscode); 
+$smarty->assign("jscode", 'Powered by <a target="_blank" href="http://yun.aoaoao.me">树洞外链</a> '.$jscode); 
 $smarty->display("index.html");  
 
 ?>
