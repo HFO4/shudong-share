@@ -30,6 +30,26 @@
                     </td>
                     </td>~sectionelse~~ ~/section~~</tbody>
         </table> </div><a href="javascript:void(0)" onclick="delall();" id="s" class="btn btn-raised btn-danger"><i class="fa fa-remove" aria-hidden="true"></i> 删除选中文件</a>
+             <div class="row">
+        <div class="col-md-6"><br>~$jilu~~</div>
+        <div class="col-md-6"><nav>
+  <ul class="pagination pagination-sm"style="float:right;">
+    <li>
+      <a href="~$pre~~" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    
+  ~$fy~~
+ 
+    <li>
+      <a href="~$ne~~" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav></div>
+</div>
     </div>~include file="footer.html" titm = $tit head=$head zzurl=$zzurl isvisitor=$isVisitor userinfo=$userinfo~~
     <script type="text/javascript" src="~$zzurl~~content/themes/material/js/ZeroClipboard.js"></script>
     <script language="JavaScript">
@@ -88,5 +108,6 @@
         function selectAll(checkbox) {
             $('input[type=checkbox]').prop('checked', $(checkbox).prop('checked'));
         }
+         $("a[href='#").parent().addClass("active");
     </script>
     </script>
