@@ -3,7 +3,6 @@
  <head> 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
   <title>音频播放器 </title> 
-         <link rel="stylesheet" href="../includes/APlayer/APlayer.min.css">
       </head> 
  <body>
 
