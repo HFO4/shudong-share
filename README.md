@@ -9,6 +9,7 @@
 - 主页：http://yun.aoaoao.me/
 - 帮助文档：http://yun.aoaoao.me/help.php
 - 演示站：http://yun.aoaoao.me/demo/
+- Telegram讨论组：https://t.me/joinchat/AAAAAAjY3eZJeKX3Kwfptw
 
 ### 安装
 未安装时自动跳转至install目录进行安装
