@@ -46,7 +46,7 @@ if(!empty($_FILES["file"]["name"])){
 		echo json_encode($result);
 		exit();	
 	}
-	if ($autoName){
+	if ($autoName == "true"){
 		$arrayName = array('{date}' => date('YmjGis'),'{rand4}' => rand(1000,9999),'{rand8}' => rand(10000000,99999999) ,'{time}' => time());
 		if(end($fileExplode)=="php"){
 			exit();
