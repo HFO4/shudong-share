@@ -216,7 +216,7 @@ function QiniuJsSDK() {
             return key;
         };
         plupload.extend(option, op, {
-            url:"https://up.qbox.me",
+            url:upserver,
             multipart_params:{
                 token:""
             }
@@ -318,7 +318,7 @@ function QiniuJsSDK() {
                         }
                     }
                     up.setOption({
-                        url:"https://up.qbox.me/mkblk/" + blockSize,
+                        url:upserver+"/mkblk/" + blockSize,
                         multipart:false,
                         chunk_size:chunk_size,
                         required_features:"chunks",
@@ -340,7 +340,7 @@ function QiniuJsSDK() {
             chunk_size = chunk_size || up.settings && up.settings.chunk_size;
             if (leftSize < chunk_size) {
                 up.setOption({
-                    url:"https://up.qbox.me/mkblk/" + leftSize
+                    url:upserver+"/mkblk/" + leftSize
                 });
             }
             localStorage.setItem(file.name, JSON.stringify({
@@ -515,7 +515,7 @@ function QiniuJsSDK() {
                             }
                         }
                     }
-                    var url = "https://up.qbox.me/mkfile/" + file.size + key + x_vars_url;
+                    var url = upserver+"/mkfile/" + file.size + key + x_vars_url;
                     var ajax = that.createAjax();
                     ajax.open("POST", url, true);
                     ajax.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");

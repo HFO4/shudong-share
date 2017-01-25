@@ -50,7 +50,7 @@ if($policyType!="qiniu"){
 	}
 }else{
 	$fileType = 'var min="'.$fileType.'"';
-	$upServer = "https://up.qbox.me";
+	$upServer = $serverUrl;
 	$filePart = "4";
 }
 $smarty->template_dir = "content/themes/".$theme;

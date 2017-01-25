@@ -479,6 +479,26 @@ $zzurl= $row['zzurl'];
                     </div>
               
             </div>
+             <div style="height:10px;"></div>
+            <div class="row">
+                <div class="col-lg-2" align="right">
+                 <label class="lab">储存区:</label>
+                    </div>
+                 <div class="col-lg-5" align="right">
+                 <select name="p_server" class="form-control">
+
+  <option value ="https://up.qbox.me">华东区(https://up.qbox.me)</option>
+ <option value ="https://up-z1.qbox.me">华北区(https://up-z1.qbox.me)</option>
+  <option value ="https://up-z2.qbox.me">华南区(https://up-z2.qbox.me)</option>
+  <option value ="https://up-na0.qbox.me">北美区(https://up-na0.qbox.me)</option>
+    </select> 
+
+                    </div>
+                    <div class="col-lg-3" align="right">
+                <div class="sm" align="left">可在七牛后台查看或创建空间时选择。请正确填写，否则无法上传。</div>
+                    </div>
+              
+            </div>
    <div style="height:10px;"></div>
             <div class="row">
                 <div class="col-lg-2" align="right">

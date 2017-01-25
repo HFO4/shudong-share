@@ -45,7 +45,11 @@ switch ($action) {
 		$policyname=$_POST['policyname'];
 		$policytype=$_POST['policytype'];
 		$kjm=$_POST['kjm'];
-		$p_server = $_POST['p_server_method'] == "http://" ? "http://".$_POST['p_server']."/" : "https://".$_POST['p_server']."/";
+		if($policytype == "qiniu"){
+			$p_server = $_POST["p_server"];
+		}else{
+			$p_server = $_POST['p_server_method'] == "http://" ? "http://".$_POST['p_server']."/" : "https://".$_POST['p_server']."/";
+		}
 		$p_dir=$_POST['p_dir'];
 		$namerule=$_POST['namerule'];
 		$zzurl=$_POST['zzurl'];
