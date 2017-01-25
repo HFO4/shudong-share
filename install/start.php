@@ -176,8 +176,11 @@ echo substr($mulu,0,-7);
           <div class="panel-body" align="center">
           <br />
      <a class="btn btn-lg btn-warning"style="width: 250px;" title="点击进行交流" target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=01f6d572bb750014df04c243b69fe722c4acd666e8e9a6a934691f55c03f05b6">
-		使用交流群:493870295 
-		</a><br /><br /><br />
+		使用交流QQ群:493870295 
+		</a><br /><br />
+		   <a class="btn btn-lg btn-info"style="width: 250px;" title="点击进行交流" target="_blank" href="https://aoaoao.me/api/join.php">
+		Telegram群
+		</a><br />
           </div>
         </div>
     </div>
@@ -206,7 +209,7 @@ echo substr($mulu,0,-7);
             <div class="panel panel-default">
           <div class="panel-heading">关于</div>
           <div class="panel-body" >
-  程序版本：2.4.2<br />作者博客：<a href="https://aoaoao.me" target="new">树洞分享</a>
+  程序版本：2.4.6<br />作者博客：<a href="https://aoaoao.me" target="new">树洞分享</a>
   <br />E-mail:abslant@126.com<br />QQ:912394456<br />感谢您的使用！
           </div>
         </div>
