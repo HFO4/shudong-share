@@ -102,7 +102,7 @@ $version= explode("|",$row['version']);
 function check(){
 	$("#jc").attr("disabled","true");
 		$("#jc").html("检查中...");
-$.getJSON("http://aoaoao.me/api/check.php?v=<?php echo $version[1] ?>&callback=?",
+$.getJSON("https://aoaoao.me/api/check.php?v=<?php echo $version[1] ?>&callback=?",
    function(data){
 var ge=data;
 	if(ge[0]=="bad"){ 
