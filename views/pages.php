@@ -50,7 +50,8 @@ if($err[0]){
 	$smarty->assign("head", $head); //应用模板头
 	$smarty->assign("jscode", $jscode); //应用模板头
 	$smarty->assign("message", $err[1]); 
-	$smarty->assign("jscode", 'Powered by <a target="_blank" href="http://yun.aoaoao.me">树洞外链</a> '.$jscode);  
+	$smarty->assign("jscode", 'Powered by <a target="_blank" href="http://yun.aoaoao.me">树洞外链</a> '.$jscode);
+	header("HTTP/1.1 404 Not Found");    
 	$smarty->display("message_bad.html");  // 输出页面
 }else{
 }

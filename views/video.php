@@ -45,6 +45,7 @@ if($ming=="" || $zhuangtai=="1" || $autoName == ""){
 	$smarty->assign("head", $head); //应用模板头
 	$smarty->assign("jscode", $jscode); //应用模板头
 	$smarty->assign("message", "文件未找到或者已被删除"); 
+	header("HTTP/1.1 404 Not Found"); 
 	$smarty->assign("jscode", 'Powered by <a target="_blank" href="http://yun.aoaoao.me">树洞外链</a> '.$jscode);  
 	$smarty->display("message_bad.html");  // 输出页面
 }else{

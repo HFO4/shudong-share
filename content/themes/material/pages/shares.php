@@ -42,13 +42,15 @@ if($pageval=="1"){
 }else{
 	$pre =  $url."?id=explore&page=".($pageval-1);
 }
-if ($pageval==$pagenum){
+if ($pageval==$pagenum||$pagenum=="0"){
 	$ne =  "##";
 }else{
     $ne =  $url."?id=explore&page=".($pageval+1);
 }
 $p = new PageTool($num,$pageval,$pagesize);
-
+if(($pagenum != "0" and $pageval > $pagenum) or $pagenum =="0" and $pageval != "1"){
+	header("HTTP/1.1 404 Not Found"); 
+}
 $smarty->template_dir = "./../content/themes/".$theme;
 $head='<script type="text/javascript" src="./../includes/js/jquery-1.9.1.min.js"></script>';
 $jscode=$tjcode;
