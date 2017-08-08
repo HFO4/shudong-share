@@ -9,6 +9,9 @@ $ming=$_POST['ming'];//获取POST的数据
 if($ming==""){  
 	echo"bad request";
 	exit();
+} else if (preg_match('/^[.\/\\\\]/', $ming)) { //检查开头是否有违法路径字元 ./\
+	echo"bad request";
+	exit();
 }
 $uploadUser=$userInfo["uid"];
 $policyId=$userInfo["uid"];
