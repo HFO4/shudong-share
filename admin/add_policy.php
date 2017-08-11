@@ -48,7 +48,18 @@ $zzurl= $row['zzurl'];
             </div>
             <!-- /.row -->
     <div class="row" id="choose">
-    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请选择文件存储位置：</h4>
+    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请选择文件存储位置：</h4> 
+<div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="images/upyun.png" class="img-responsive">
+      <div class="caption">
+        <h3 align="center">又拍云存储 <span class="label label-success">推荐</span></h3>
+        <p>通过以下链接注册可获得<strong>61元代金券+首冲10%金额代金券。</strong><a href="https://console.upyun.com/register/?invite=ryPX265PW" target="_blank"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> 立即注册领取优惠</a></p>
+
+        <p><a id="upyun" class="btn btn-primary btn-block" role="button">使用这种方式</a></p>
+      </div>
+    </div>
+  </div>
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
       <img src="images/qiniu.png"  class="img-responsive">
@@ -69,16 +80,7 @@ $zzurl= $row['zzurl'];
       </div>
     </div>
   </div>
-      <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="images/upyun.png"  class="img-responsive">
-      <div class="caption">
-        <h3 align="center">又拍云存储</h3>
-        <p>又拍云存储在一定条件下是免费的。<br><br><br></p>
-        <p><a id="upyun" class="btn btn-primary btn-block" role="button">使用这种方式</a></p>
-      </div>
-    </div>
-  </div>
+
     <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
       <img src="images/server.png"  class="img-responsive">
