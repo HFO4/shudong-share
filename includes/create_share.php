@@ -33,24 +33,24 @@ if ($fname == "") {
     $pkey = $rand[0] . $rand[1] . $rand[2] . $rand[3] . $rand[4];
     $uid = $userInfo['uid'];
     if ($ftype == "open") {
-        $sql = "INSERT INTO  `$sqlname`.`sd_ss` (`sskey` ,`filekey` ,`sstime` ,`downloadnum` ,`fname`,`cuser`)VALUES ('$pkey', '$fkey', '$dd', '0' ,?, '$uid');";
+        $sql = "INSERT INTO  `$sqlname`.`sd_ss` (`sskey` ,`filekey` ,`sstime` ,`downloadnum` ,`fname`,`cuser`)VALUES ('$pkey', ?, '$dd', '0' ,?, '$uid');";
         if (!$con) {
             $re = "bad.数据库连接失败";
         } else {
             $stmt = $con->prepare($sql);
-            $stmt->bind_param('s', $rname);
+            $stmt->bind_param('ss',$fkey, $rname);
             $stmt->execute();
         }
         $jieguo = $ftype . "." . $re . "." . "f.php?k=" . $pkey;
     } else if ($ftype == "lock") {
         $passwd = $rand[6] . $rand[7] . $rand[8] . $rand[9];
-        $sql = "INSERT INTO  `$sqlname`.`sd_sskey` (`sskey` ,`filekey` ,`sstime` ,`downloadnum` ,`fname` ,`passwd` ,`cuser`)VALUES ('$pkey', '$fkey', '$dd', '0' ,? ,'$passwd','$uid');";
+        $sql = "INSERT INTO  `$sqlname`.`sd_sskey` (`sskey` ,`filekey` ,`sstime` ,`downloadnum` ,`fname` ,`passwd` ,`cuser`)VALUES ('$pkey', ?, '$dd', '0' ,? ,'$passwd','$uid');";
         if (!$con) {
             $re = "bad.数据库连接失败";
         } else {
 
             $stmt = $con->prepare($sql);
-            $stmt->bind_param('s', $rname);
+            $stmt->bind_param('ss',$fkey, $rname);
             $stmt->execute();
         }
         $jieguo = $ftype . "." . $re . "." . $passwd . "." . "s.php?k=" . $pkey;

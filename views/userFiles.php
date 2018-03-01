@@ -28,7 +28,7 @@ $url=parse_url($url);
 $url=$url[path];
 $pagesize=10; 
 if(isset($_GET['pagesize'])){
-	$pagesize = $_GET['pagesize'];
+	$pagesize = (int)$_GET['pagesize'];
 }
 $numq=mysqli_query($con,"SELECT * FROM `sd_file` where upuser = '$uid' and cishuo = '0'");
 $num = mysqli_num_rows($numq);

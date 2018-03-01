@@ -23,9 +23,8 @@ while($row1 = mysqli_fetch_assoc($results1)){
 $ip=get_real_ip();
 $dd=date('Y-m-d H:i:s');
 $rand = md5(time() . mt_rand(0,1000));
-$stmt = $con->prepare("INSERT INTO  `$sqlname`.`sd_file` (`ming` ,`key1` ,`uploadip` ,`uploadtime` ,`cishuo` ,`upuser` ,`policyid`)VALUES (?, '$rand', '$ip', '$dd', '0' , '$uploadUser', '$policyId');");
-
-$stmt->bind_param('s', $ming);
+$stmt = $con->prepare("INSERT INTO  `$sqlname`.`sd_file` (`ming` ,`key1` ,`uploadip` ,`uploadtime` ,`cishuo` ,`upuser` ,`policyid`)VALUES (?, '$rand', ?, '$dd', '0' , '$uploadUser', '$policyId');");
+$stmt->bind_param('ss', $ming,$ip);
 $stmt->execute();
 if (!$con){
   $re="bad";
